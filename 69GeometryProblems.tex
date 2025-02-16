@@ -1,0 +1,56 @@
+
+%            ███╗░░░███╗░█████╗░██████╗░██╗░░██╗
+%            ████╗░████║██╔══██╗██╔══██╗██║░██╔╝
+%            ██╔████╔██║███████║██████╔╝█████═╝░
+%            ██║╚██╔╝██║██╔══██║██╔══██╗██╔═██╗░
+%            ██║░╚═╝░██║██║░░██║██║░░██║██║░╚██╗
+%            ╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝
+ 
+%   ███╗░░██╗░██████╗░██╗░░░██╗██╗░░░██╗███████╗███╗░░██╗
+%   ████╗░██║██╔════╝░██║░░░██║╚██╗░██╔╝██╔════╝████╗░██║
+%   ██╔██╗██║██║░░██╗░██║░░░██║░╚████╔╝░█████╗░░██╔██╗██║
+%   ██║╚████║██║░░╚██╗██║░░░██║░░╚██╔╝░░██╔══╝░░██║╚████║
+%   ██║░╚███║╚██████╔╝╚██████╔╝░░░██║░░░███████╗██║░╚███║
+%   ╚═╝░░╚══╝░╚═════╝░░╚═════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚══╝
+
+
+
+\documentclass{article}
+
+\input{tex/preamble}
+
+\begin{document}
+
+    \input{tex/bookcover}
+
+    \frontmatter
+
+    \newpage
+
+    \clearpage
+    \begin{center}
+        \thispagestyle{empty}
+        \vspace*{\fill}
+        \emph{"Mathematics, in essence, is a sea of ideas that when you look at it, it feels like it is something you could've discovered yourself."}
+        \emph{--- I don't think I'm the first person in history to say this}
+        \vspace*{\fill}
+    \end{center}
+    \clearpage
+
+    \newpage
+    
+    \part*{Lời nói đầu}
+    \newpage
+
+    \tableofcontents
+    \thispagestyle{empty}
+
+    \newpage
+
+    \mainmatter
+
+    \input{tex/theory}
+
+    \input{tex/exercises}
+
+\end{document}

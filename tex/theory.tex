@@ -1,0 +1,1613 @@
+\part{Lí thuyết cơ sở}
+
+\section{Phương tích - Trục đẳng phương}
+
+    \subsection{Phương tích của một điểm đối với một đường tròn}
+    
+        \begin{theorem}
+            Cho đường tròn \((O;R)\) và một điểm \(P\) bất kì. Một đường thẳng \(\ell\) thay đổi đi qua \(P\) cắt \((O)\) tại hai điểm \(A\) và \(B\). Khi đó tích \(\overline{PA} \cdot \overline{PB}\) không đổi và bằng \(OP^2 - R^2\).
+        \end{theorem}
+        
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.4]
+                \draw [line width=0.4pt] (0.24,0.5) circle (4.26cm);
+                \draw [line width=0.4pt] (-8.56,0.34)-- (0.24,0.5);
+                \draw [line width=0.4pt] (-8.56,0.34)-- (1.5206974893854925,4.562931692839752);
+                \begin{scriptsize}
+                    \draw [fill=black] (0.24,0.5) circle (0.6pt);
+                    \draw[color=black] (0.4,0.85) node {$O$};
+                    \draw [fill=black] (-8.56,0.34) circle (0.6pt);
+                    \draw[color=black] (-8.4,0.69) node {$P$};
+                    \draw [fill=black] (-3.5541505001165925,2.4370136763753134) circle (0.6pt);
+                    \draw[color=black] (-3.68,2.81) node {$A$};
+                    \draw [fill=black] (1.5206974893854925,4.562931692839752) circle (0.6pt);
+                    \draw[color=black] (1.68,4.91) node {$B$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+        
+        \begin{definition}
+            Đại lượng \(OP^2 - R^2\) được gọi là phương tích của điểm \(P\) đối với đường tròn \((O;R)\). Kí hiệu: \(\mathcal{P}_{P/(O)} = OP^2 - R^2\).
+        \end{definition}
+        Như vậy \(\mathcal{P}_{P/(O)} > 0\) khi và chỉ khi \(P\) nằm ngoài \((O)\), \(\mathcal{P}_{P/(O)} < 0\) khi và chỉ khi \(P\) nằm trong \((O)\), và \(\mathcal{P}_{P/(O)} = 0\) khi và chỉ khi \(P\) thuộc \((O)\).
+
+        \begin{property}
+            Cho đường tròn \((O)\) và một điểm \(P\) nằm ngoài \((O)\). Qua \(P\), kẻ cát tuyến \(PAB\) và tiếp tuyến \(PT\) tới \((O)\). Khi đó \(\mathcal{P}_{P/(O)} = \overline{PA} \cdot \overline{PB} = PT^2\).
+        \end{property}
+
+        \begin{property}
+            Cho hai đường thẳng \(AB\) và \(CD\) cắt nhau tại \(P\). Khi đó, bốn điểm \(A\), \(B\), \(C\), \(D\) cùng thuộc một đường tròn khi và chỉ khi \(\overline{PA} \cdot \overline{PB} = \overline{PC} \cdot \overline{PD}\).
+        \end{property}
+
+        \begin{property}
+            Cho hai đường thẳng \(AB\) và \(PT\) cắt nhau tại \(P\). Khi đó \((ABT)\) tiếp xúc \(PT\) tại \(T\) khi và chỉ khi \(\overline{PA} \cdot \overline{PB} = PT^2\).
+        \end{property}
+
+        \begin{property}
+            Cho \(AB\) là một đường kính bất kì của \((O)\). Khi đó \(\mathcal{P}_{P/(O)} = \overrightarrow{PA} \cdot \overrightarrow{PB}\).
+        \end{property}
+
+    \subsection{Trục đẳng phương và tâm đẳng phương}
+
+        \begin{problemme}
+            Cho hai đường tròn \((O_1;R_1)\) và \((O_2;R_2)\). Tìm quỹ tích các điểm \(P\) có cùng phương tích với hai đường tròn này.
+        \end{problemme}
+    
+        \begin{solution}
+            Ta có \(\mathcal{P}_{P/(O_1)} = \mathcal{P}_{P/(O_2)}\) khi và chỉ khi
+            \[PO_1^2 - R_1^2 = PO_2^2 - R_2^2 \Leftrightarrow PO_1^2 - PO_2^2 = R_1^2 - R_2^2.\]
+            Nếu \(O_1 \equiv O_2\), không có điểm \(P\) nào thỏa mãn. Nếu \(O_1\) và \(O_2\) không trùng nhau, thì tồn tại duy nhất điểm \(H\) trên đoạn thẳng \(O_1O_2\) sao cho \(HO_1^2 - HO_2^2 = R_1^2 - R_2^2\). Như vậy
+            \[PO_1^2 - PO_2^2 = HO_1^2 - HO_2^2.\]
+            Áp dụng định lí Pythagore, tập hợp điểm \(P\) là một đường thẳng \(\Delta\) vuông góc với \(O_1O_2\). Nếu gọi \(M\) là trung điểm \(O_1O_2\) thì \(\Delta\) cắt \(O_1O_2\) tại điểm \(H\) thỏa mãn
+            \[\overline{MH} = \frac{R_1^2 - R_2^2}{2\overline{O_1O_2}}.\]
+            Đây là một độ dài cố định, do đó đường thẳng \(\Delta\) cố định.
+        \end{solution}
+    
+        \begin{definition}
+            Tập hợp các điểm có cùng phương tích với hai đường tròn không đồng tâm là một đường thẳng vuông góc với đường nối tâm của hai đường tròn. Đường thẳng này được gọi là trục đẳng phương của hai đường tròn đó.
+        \end{definition}
+    
+        \begin{theorem}
+            Nếu ba đường tròn có tâm không thẳng hàng thì trục đẳng phương của từng cặp hai trong ba đường tròn đồng quy tại một điểm.
+        \end{theorem}
+    
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.5]
+                \draw [line width=0.4pt] (0.24,0.5) circle (4.26cm);
+                \draw [line width=0.4pt] (13.530417862835389,0.18659537115743974) circle (4.803555790292192cm);
+                \draw [line width=0.4pt] (7.128567204974161,-11.722612992819087) circle (5.724240692746259cm);
+                \draw [line width=0.4pt] (0.24,0.5)-- (13.530417862835389,0.18659537115743974);
+                \draw [line width=0.4pt] (13.530417862835389,0.18659537115743974)-- (7.128567204974161,-11.722612992819087);
+                \draw [line width=0.4pt] (7.128567204974161,-11.722612992819087)-- (0.24,0.5);
+                \draw [line width=0.4pt] (4.683222122211225,-2.325884839553151)-- (17.808386849703634,-9.381378527899193);
+                \draw [line width=0.4pt] (6.843239657652722,6.423249141706837)-- (6.570277752492664,-5.152131201623202);
+                \draw [line width=0.4pt] (8.50462189870942,-2.296557834868234)-- (-4.602205311786399,-9.683461121140095);
+                \begin{scriptsize}
+                    \draw [fill=black] (0.24,0.5) circle (0.6pt);
+                    \draw[color=black] (-0.41810132495604774,0.8902737131521783) node {$O_{1}$};
+                    \draw [fill=black] (13.530417862835389,0.18659537115743974) circle (0.6pt);
+                    \draw[color=black] (14.094053761374015,0.6212736559809363) node {$O_2$};
+                    \draw [fill=black] (7.128567204974161,-11.722612992819087) circle (0.6pt);
+                    \draw[color=black] (7.095283932505616,-12.455804401725247) node {$O_3$};
+                    \draw [fill=black] (6.612468633193865,-3.362960325012769) circle (0.6pt);
+                    \draw[color=black] (7.043822389646289,-4.182188344248325) node {$P$};
+                    \draw[color=black] (15.432053875716504,-7.046496230058682) node {$\ell_{23}$};
+                    \draw[color=black] (7.609899361098881,5.33819708472704) node {$\ell_{12}$};
+                    \draw[color=black] (-1.6017168107205566,-7.04357314434003) node {$\ell_{31}$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+    
+        \begin{proof}
+            Xét ba đường tròn \((O_1)\), \((O_2)\), \((O_3)\) có tâm không thẳng hàng. Gọi \(\ell_{ij}\) (với \(i \neq j\) và \(i,j \in \{1;2;3\}\)) là trục đẳng phương của \((O_i)\) và \((O_J)\).
+    
+            Do \(O_1\), \(O_2\), \(O_3\) không thẳng hàng nên hai đường thẳng \(\ell_{12}\) và \(\ell_{23}\) cắt nhau. Gọi \(P\) là giao điểm của hai đường thẳng ấy. Khi đó, ta có \(\mathcal{P}_{P/(O_1)} = \mathcal{P}_{P/(O_2)}\) và \(\mathcal{P}_{P/(O_2)} = \mathcal{P}_{P/(O_3)}\). Suy ra \(\mathcal{P}_{P/(O_3)} = \mathcal{P}_{P/(O_1)}\), hay \(P\) thuộc đường thẳng \(\ell_{31}\). Vì vậy \(\ell_{12}\), \(\ell_{23}\), \(\ell_{31}\) đồng quy.
+        \end{proof}
+    
+        \begin{definition}
+            Điểm giao nhau trên là tâm đẳng phương của ba đường tròn.
+        \end{definition}
+    
+        \begin{definition}
+            Một bộ đường tròn đồng trục là một tập hợp các đường tròn có chung một trục đẳng phương.
+        \end{definition}
+
+\section{Định lí Ceva - Định lí Menelaus}
+
+    \subsection{Định lí Ceva}
+
+        \begin{theorem}
+            (\textit{Ceva}) Cho tam giác \(ABC\) và các điểm \(A'\), \(B'\), \(C'\) lần lượt nằm trên các đường thẳng \(BC\), \(CA\), \(AB\) của tam giác, sao cho không có điểm nào nằm ngoài đoạn thẳng tương ứng của nó, hoặc có đúng hai điểm nằm ngoài đoạn thẳng tương ứng của nó. Khi đó các đường thẳng \(AA'\), \(BB'\), \(CC'\) đồng quy hoặc đôi một song song khi và chỉ khi
+            \[\frac{\overline{BA'}}{\overline{A'C}} \cdot \frac{\overline{CB'}}{\overline{B'A}} \cdot \frac{\overline{AC'}}{\overline{C'B}} = 1.\]
+        \end{theorem}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.25]
+                \draw [line width=0.4pt] (7.092563517187312,2.3022651241369627)-- (1.065702750052392,-15.398244876637616);
+                \draw [line width=0.4pt] (1.065702750052392,-15.398244876637616)-- (27.182099407637047,-15.072468618954648);
+                \draw [line width=0.4pt] (27.182099407637047,-15.072468618954648)-- (7.092563517187312,2.3022651241369627);
+                \draw [line width=0.4pt] (7.092563517187312,2.3022651241369627)-- (10.948753911986458,-15.274963573162347);
+                \draw [line width=0.4pt] (1.065702750052392,-15.398244876637616)-- (14.335878003723051,-3.9622230804344696);
+                \draw [line width=0.4pt] (27.182099407637047,-15.072468618954648)-- (4.1946785868523575,-6.208640166756662);
+                \begin{scriptsize}
+                    \draw [fill=black] (7.092563517187312,2.3022651241369627) circle (0.6pt);
+                    \draw[color=black] (7.055109949549961,3.3189063374890693) node {$A$};
+                    \draw [fill=black] (1.065702750052392,-15.398244876637616) circle (0.6pt);
+                    \draw[color=black] (0.5434000614368346,-16.388632193508448) node {$B$};
+                    \draw [fill=black] (27.182099407637047,-15.072468618954648) circle (0.6pt);
+                    \draw[color=black] (27.639499290077396,-16.032104572078968) node {$C$};
+                    \draw [fill=black] (10.948753911986458,-15.274963573162347) circle (0.6pt);
+                    \draw[color=black] (11.095756325750747,-16.032104572078968) node {$A'$};
+                    \draw [fill=black] (14.335878003723051,-3.9622230804344696) circle (0.6pt);
+                    \draw[color=black] (14.982768729330816,-2.842063226812094) node {$B'$};
+                    \draw [fill=black] (9.400078553080839,-8.215814990128232) circle (0.6pt);
+                    \draw[color=black] (8.890641705506133,-9.637824223257478) node {$P$};
+                    \draw [fill=black] (4.1946785868523575,-6.208640166756662) circle (0.6pt);
+                    \draw[color=black] (3.098514681681449,-5.702965144674235) node {$C'$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Ở đây ta chỉ chứng minh trường hợp không có điểm nào nằm ngoài đoạn thẳng tương ứng của nó. Đối với trường hợp có đúng hai điểm nằm ngoài đoạn thẳng tương ứng của nó, ta dễ dàng chứng minh tương tự.
+            
+            Trước hết, ta sẽ chứng minh mệnh đề thuận: nếu các đường thẳng \(AA'\), \(BB'\), \(CC'\) đồng quy thì
+            \[\frac{\overline{BA'}}{\overline{A'C}} \cdot \frac{\overline{CB'}}{\overline{B'A}} \cdot \frac{\overline{AC'}}{\overline{C'B}} = 1.\]
+            Thật vậy, xét đường thẳng \(\ell\) đi qua \(A\) song song \(BC\), cắt đường thẳng \(BB'\) tại \(M\) và đường thẳng \(CC'\) tại \(N\). Gọi \(P\) là điểm đồng quy của các đường thẳng \(AA'\), \(BB'\), \(CC'\).
+
+            Ta có các tỉ lệ thức
+            \(\dfrac{\overline{CB'}}{\overline{B'A}} = \dfrac{\overline{BC}}{\overline{AM}}\) (do \(\triangle B'BC \sim \triangle B'MA\)),
+            \(\dfrac{\overline{C'B}}{\overline{AC'}} = \dfrac{\overline{BC}}{\overline{NA}}\) (do \(\triangle C'CB \sim \triangle C'NA\)),
+            và \(\dfrac{\overline{A'B}}{\overline{AM}} = \dfrac{\overline{A'C}}{\overline{AN}} = \dfrac{\overline{A'P}}{\overline{AP}}\) (do \(\triangle A'PB \sim \triangle APM\) và \(\triangle A'PC \sim \triangle APN\)). Do đó
+            \[
+            \frac{\overline{BA'}}{\overline{A'C}} \cdot \frac{\overline{CB'}}{\overline{B'A}} \cdot \frac{\overline{AC'}}{\overline{C'B}}
+            = \frac{\overline{BA'}}{\overline{A'C}} \cdot \frac{\overline{BC}}{\overline{AM}} \cdot \frac{\overline{NA}}{\overline{BC}} \\
+            = \frac{\overline{BA'}}{\overline{A'C}} \cdot \frac{\overline{NA}}{\overline{AM}} 
+            = \frac{\overline{A'B}}{\overline{AM}} \cdot \frac{\overline{AN}}{\overline{A'C}} = 1.
+            \]
+
+            \begin{center}
+                \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.25]
+                \draw [line width=0.4pt] (7.092563517187312,2.3022651241369627)-- (1.065702750052392,-15.398244876637616);
+                \draw [line width=0.4pt] (1.065702750052392,-15.398244876637616)-- (27.182099407637047,-15.072468618954648);
+                \draw [line width=0.4pt] (27.182099407637047,-15.072468618954648)-- (7.092563517187312,2.3022651241369627);
+                \draw [line width=0.4pt] (7.092563517187312,2.3022651241369627)-- (10.948753911986458,-15.274963573162347);
+                \draw [line width=0.4pt] (1.065702750052392,-15.398244876637616)-- (14.335878003723051,-3.9622230804344696);
+                \draw [line width=0.4pt] (27.182099407637047,-15.072468618954648)-- (4.1946785868523575,-6.208640166756662);
+                \draw [line width=0.4pt] (14.335878003723051,-3.9622230804344696)-- (21.818237962465076,2.485953370855604);
+                \draw [line width=0.4pt] (4.1946785868523575,-6.208640166756662)-- (-17.095003359668404,2.0005491131990545);
+                \draw [line width=0.4pt] (21.818237962465076,2.485953370855604)-- (-17.095003359668404,2.0005491131990545);
+                \begin{scriptsize}
+                    \draw [fill=black] (7.092563517187312,2.3022651241369627) circle (0.6pt);
+                    \draw[color=black] (7.640032587194735,3.403354774246874) node {$A$};
+                    \draw [fill=black] (1.065702750052392,-15.398244876637616) circle (0.6pt);
+                    \draw[color=black] (0.4543697437634724,-16.334227379808643) node {$B$};
+                    \draw [fill=black] (27.182099407637047,-15.072468618954648) circle (0.6pt);
+                    \draw[color=black] (27.708099987768534,-16.334227379808643) node {$C$};
+                    \draw [fill=black] (10.948753911986458,-15.274963573162347) circle (0.6pt);
+                    \draw[color=black] (10.953646067309495,-16.334227379808643) node {$A'$};
+                    \draw [fill=black] (14.135878003723051,-3.9622230804344696) circle (0.6pt);
+                    \draw[color=black] (14.719902534502519,-2.6170654459252543) node {$B'$};
+                    \draw [fill=black] (9.400078553080839,-8.215814990128232) circle (0.6pt);
+                    \draw[color=black] (8.799482314330379,-9.714314081603463) node {$P$};
+                    \draw [fill=black] (4.1946785868523575,-6.208640166756662) circle (0.6pt);
+                    \draw[color=black] (3.743797795450414,-4.559136484690456) node {$C'$};
+                    \draw [fill=black] (21.818237962465076,2.485953370855604) circle (0.6pt);
+                    \draw[color=black] (22.33503678051813,3.5975618781233942) node {$M$};
+                    \draw [fill=black] (-17.095003359668404,2.0005491131990545) circle (0.6pt);
+                    \draw[color=black] (-16.57111969607817,3.1444119690781807) node {$N$};
+                    \end{scriptsize}
+                \end{tikzpicture}
+            \end{center}
+            
+            Bây giờ, ta sẽ chỉ ra mệnh đề đảo vẫn đúng: nếu ta có các điểm \(A'\), \(B'\), \(C'\) lần lượt nằm trên các đường thẳng \(BC\), \(CA\), \(AB\) (sao cho không có điểm nào nằm ngoài đoạn thẳng tương ứng của nó) thỏa mãn
+            \[\frac{\overline{BA'}}{\overline{A'C}} \cdot \frac{\overline{CB'}}{\overline{B'A}} \cdot \frac{\overline{AC'}}{\overline{C'B}} = 1\]
+            thì các đường thẳng \(AA'\), \(BB'\), \(CC'\) đồng quy. Thật vậy, giả sử ngược lại rằng các đường thẳng \(AA'\), \(BB'\), \(CC'\) không đồng quy. Gọi \(P\) là giao điểm của \(BB'\) và \(CC'\); \(A_0\) là giao điểm của \(AP\) và \(BC\).
+
+            Theo mệnh đề thuận, ta có
+            \[\frac{\overline{BA_0}}{\overline{A_0C}} \cdot \frac{\overline{CB'}}{\overline{B'A}} \cdot \frac{\overline{AC'}}{\overline{C'B}} = 1.\]
+            Kết hợp với tỉ lệ giả thiết, ta thu được \(\dfrac{\overline{BA'}}{\overline{A'C}} = \dfrac{\overline{BA_0}}{\overline{A_0C}}\). Điều này xảy ra khi và chỉ khi \(A'\) trùng \(A_0\), vô lí. Vì thế giả sử sai, hay ta có mệnh đề đảo đúng.
+
+            Vì vậy, định lí Ceva được chứng minh.
+        \end{proof}
+
+        \begin{definition}
+            Các đoạn thẳng \(AA'\), \(BB'\), \(CC'\) được xác định như trên được gọi là các cevian của \(\triangle ABC\).
+        \end{definition}
+
+        \begin{corollary}
+            (\textit{Trọng tâm}) Cho tam giác \(ABC\). Gọi \(M\), \(N\), \(P\) lần lượt là trung điểm của đoạn thẳng \(BC\), \(CA\), \(AB\). Khi đó \(AM\), \(BN\), \(CP\) đồng quy tại trọng tâm \(G\) của tam giác \(ABC\). 
+        \end{corollary}
+
+        \begin{corollary}
+            (\textit{Trực tâm}) Cho tam giác \(ABC\). Gọi \(D\), \(E\), \(F\) lần lượt là hình chiếu vuông góc của \(A\), \(B\), \(C\) lên \(BC\), \(CA\), \(AB\). Khi đó \(AD\), \(BE\), \(CF\) đồng quy tại trực tâm \(H\) của tam giác \(ABC\). 
+        \end{corollary}
+
+        Đối với trực tâm thì sẽ hơi khó thấy, nhưng chú ý rằng \(\dfrac{DB}{DC} = \dfrac{AB \cos B}{AC \cos C}\), v.v.
+
+        \begin{corollary}
+            (\textit{Điểm Gergonne}) Cho tam giác \(ABC\). Gọi \(A_1\), \(B_1\), \(C_1\) lần lượt là tiếp điểm của đường tròn nội tiếp tam giác \(ABC\) với các cạnh \(BC\), \(CA\), \(AB\). Khi đó \(AA_1\), \(BB_1\), \(CC_1\) đồng quy tại điểm Gergonne \(G_e\) của tam giác \(ABC\). 
+        \end{corollary}
+
+        \begin{corollary}
+            (\textit{Điểm Nagel}) Cho tam giác \(ABC\). Gọi \(A_2\), \(B_2\), \(C_2\) lần lượt là tiếp điểm của đường tròn bàng tiếp ứng với góc \(A\), \(B\), \(C\) của tam giác \(ABC\) với các cạnh \(BC\), \(CA\), \(AB\). Khi đó \(AA_2\), \(BB_2\), \(CC_2\) đồng quy tại điểm Nagel \(N_a\) của tam giác \(ABC\). 
+        \end{corollary}
+
+        \begin{theorem}
+            (\textit{Ceva lượng giác}) Cho tam giác \(ABC\) và các điểm \(A'\), \(B'\), \(C'\) lần lượt nằm trên các đường thẳng \(BC\), \(CA\), \(AB\) của tam giác, sao cho không có điểm nào nằm ngoài đoạn thẳng tương ứng của nó, hoặc có đúng hai điểm nằm ngoài đoạn thẳng tương ứng của nó. Khi đó các đường thẳng \(AA'\), \(BB'\), \(CC'\) đồng quy khi và chỉ khi
+            \[\frac{\sin (AA';AB)}{\sin (AA';AC)} \cdot \frac{\sin (BB';BC)}{\sin (BB';BA)} \cdot \frac{\sin (CC';CA)}{\sin (CC';CB)} = 1.\]
+        \end{theorem}
+
+        \begin{proof}
+            Theo định lí sine, ta có
+            \[\frac{\overline{A'B}}{\overline{AB}} = \frac{\sin (AA';AB)}{\sin (A'A;A'B)} \hspace{0.25cm} \text{ và } \hspace{0.25cm} \frac{\overline{CA'}}{\overline{CA}} = \frac{\sin (AA';AC)}{\sin (A'A;A'C)}.\]
+            Mà \(\sin (A'A;A'B) = \sin (A'A;A'C)\) nên
+            \[\frac{\overline{A'B}}{\overline{AB}} : \frac{\overline{CA'}}{\overline{CA}} = \frac{\sin (AA';AB)}{\sin (AA';AC)}\]
+            Tương tự ta thu được
+            \[\frac{\overline{B'C}}{\overline{BC}} : \frac{\overline{AB'}}{\overline{AB}} = \frac{\sin (BB';BC)}{\sin (BB';BA)} \text{ và } \frac{\overline{C'A}}{\overline{CA}} : \frac{\overline{BC'}}{\overline{BC}} = \frac{\sin (CC';CA)}{\sin (CC';CB)}.\]
+            Do đó
+            \begin{equation}
+                \begin{aligned}
+                    \frac{\sin (AA';AB)}{\sin (AA';AC)} \cdot \frac{\sin (BB';BC)}{\sin (BB';BA)} \cdot \frac{\sin (CC';CA)}{\sin (CC';CB)}
+                    & = \left(\frac{\overline{A'B}}{\overline{AB}} : \frac{\overline{CA'}}{\overline{CA}}\right) \cdot \left(\frac{\overline{B'C}}{\overline{BC}} : \frac{\overline{AB'}}{\overline{AB}}\right) \cdot \left(\frac{\overline{C'A}}{\overline{CA}} : \frac{\overline{BC'}}{\overline{BC}}\right) \\
+                    & = \frac{\overline{BA'}}{\overline{A'C}} \cdot \frac{\overline{CB'}}{\overline{B'A}} \cdot \frac{\overline{AC'}}{\overline{C'B}} = 1
+                \end{aligned}
+                \notag
+            \end{equation}
+            theo định lí Ceva.
+        \end{proof}
+
+        \begin{corollary}
+            (\textit{Tâm nội tiếp}) Các đường phân giác trong của tam giác \(ABC\) đồng quy tại tâm nội tiếp \(I\) của tam giác.
+        \end{corollary}
+
+        \begin{corollary}
+            (\textit{Điểm Lemoine}) Cho tam giác \(ABC\). Qua phân giác góc \(A\) kẻ đường đối xứng với trung tuyến ứng với điểm \(A\) trong tam giác, cắt \(BC\) tại \(A_0\). Tương tự xác định các điểm \(B_0\), \(C_0\). Khi đó \(AA_0\), \(BB_0\), \(CC_0\) đồng quy tại điểm Lemoine \(L_e\) của tam giác \(ABC\).
+        \end{corollary}
+
+    \subsection{Định lí Menelaus}
+
+        \begin{theorem}
+            (\textit{Menelaus}) Cho tam giác \(ABC\) và các điểm \(A'\), \(B'\), \(C'\) lần lượt nằm trên các đường \(BC\), \(CA\), \(AB\) của tam giác, sao cho có đúng một điểm nằm ngoài đoạn thẳng tương ứng của nó, hoặc cả ba điểm đều nằm ngoài đoạn thẳng tương ứng của nó. Khi đó các điểm \(A'\), \(B'\), \(C'\) thẳng hàng khi và chỉ khi
+            \[\frac{\overline{BA'}}{\overline{A'C}} \cdot \frac{\overline{CB'}}{\overline{B'A}} \cdot \frac{\overline{AC'}}{\overline{C'B}} = -1.\]
+        \end{theorem}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.15]
+                \draw [line width=0.4pt] (7.092563517187312,2.3022651241369627)-- (1.065702750052392,-15.398244876637616);
+                \draw [line width=0.4pt] (1.065702750052392,-15.398244876637616)-- (27.182099407637047,-15.072468618954648);
+                \draw [line width=0.4pt] (27.182099407637047,-15.072468618954648)-- (7.092563517187312,2.3022651241369627);
+                \draw [line width=0.4pt] (-12.587281071379635,-15.568552367133648)-- (15.111619632486653,-4.63313475936515);
+                \draw [line width=0.4pt] (-12.587281071379635,-15.568552367133648)-- (1.065702750052392,-15.398244876637616);
+                \begin{scriptsize}
+                    \draw [fill=black] (7.092563517187312,2.3022651241369627) circle (0.6pt);
+                    \draw[color=black] (7.539986503379553,3.323906413570112) node {$A$};
+                    \draw [fill=black] (1.065702750052392,-15.398244876637616) circle (0.6pt);
+                    \draw[color=black] (0.8367606363171438,-16.448986123008405) node {$B$};
+                    \draw [fill=black] (27.182099407637047,-15.072468618954648) circle (0.6pt);
+                    \draw[color=black] (27.66690454149169,-16.037031660240029) node {$C$};
+                    \draw [fill=black] (-12.587281071379635,-15.568552367133648) circle (0.6pt);
+                    \draw[color=black] (-12.880723884272507,-16.566687398085085) node {$A'$};
+                    \draw [fill=black] (15.111619632486653,-4.63313475936515) circle (0.6pt);
+                    \draw[color=black] (15.837926396285434,-3.6204688159539447) node {$B'$};
+                    \draw [fill=black] (3.1190260723064864,-9.367763768035514) circle (0.6pt);
+                    \draw[color=black] (2.714234225235708,-8.269669181482762) node {$C'$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Ở đây ta chỉ chứng minh trường hợp có đúng một điểm nằm ngoài đoạn thẳng tương ứng của nó. Đối với trường hợp có cả ba điểm nằm ngoài đoạn thẳng tương ứng của nó, ta dễ dàng chứng minh tương tự.
+
+            Trước hết, ta sẽ chứng minh mệnh đề thuận: nếu các các điểm \(A'\), \(B'\), \(C'\) thẳng hàng thì
+            \[\frac{\overline{BA'}}{\overline{A'C}} \cdot \frac{\overline{CB'}}{\overline{B'A}} \cdot \frac{\overline{AC'}}{\overline{C'B}} = -1.\]
+            Thật vậy, gọi \(D\), \(E\), \(F\) lần lượt là hình chiếu vuông góc của các điểm \(A\), \(B\), \(C\) trên đường thẳng \(A'B'\). 
+            
+            Khi đó, ta có các tỉ lệ thức \(\dfrac{\overline{BA'}}{\overline{A'C}} = \dfrac{\overline{BE}}{\overline{FC}}\) (do \(\triangle A'BE \sim \triangle A'CF\)), \(\dfrac{\overline{CB'}}{\overline{B'A}} = \dfrac{\overline{CF}}{\overline{DA}}\) (do \(\triangle B'CF \sim \triangle B'AD\)), và \(\dfrac{\overline{AC'}}{\overline{C'B}} = \dfrac{\overline{AD}}{\overline{EB}}\) (do \(\triangle C'AD \sim \triangle C'BE\)). Từ đó ta thu được
+            \[\frac{\overline{BA'}}{\overline{A'C}} \cdot \frac{\overline{CB'}}{\overline{B'A}} \cdot \frac{\overline{AC'}}{\overline{C'B}} = \frac{\overline{BE}}{\overline{FC}} \cdot \frac{\overline{CF}}{\overline{DA}} \cdot \frac{\overline{AD}}{\overline{EB}} = -1.\]
+
+            \begin{center}
+                \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.75]
+                \draw [line width=0.4pt] (-3.44,5.36)-- (-6.1,-1.66);
+                \draw [line width=0.4pt] (-6.1,-1.66)-- (3.2,-1.6);
+                \draw [line width=0.4pt] (3.2,-1.6)-- (-3.44,5.36);
+                \draw [line width=0.4pt] (-10.01970781653209,-1.6852884375260133)-- (-1.3189016461474612,3.1366800387328815);
+                \draw [line width=0.4pt] (-1.3189016461474612,3.1366800387328815)-- (0.12994876810252365,3.939629890449809);
+                \draw [line width=0.4pt] (-6.1,-1.66)-- (-7.010285157420316,-0.01747273058966406);
+                \draw [line width=0.4pt] (-3.44,5.36)-- (-1.9989682794330506,2.759788541181722);
+                \draw [line width=0.4pt] (3.2,-1.6)-- (0.12994876810252365,3.939629890449809);
+                \draw [line width=0.4pt] (-10.01970781653209,-1.6852884375260133)-- (-6.1,-1.66);
+                \begin{scriptsize}
+                \draw [fill=black] (-3.44,5.36) circle (0.6pt);
+                \draw[color=black] (-3.42,5.79) node {$A$};
+                \draw [fill=black] (-6.1,-1.66) circle (0.6pt);
+                \draw[color=black] (-6.1,-2) node {$B$};
+                \draw [fill=black] (3.2,-1.6) circle (0.6pt);
+                \draw[color=black] (3.36,-2) node {$C$};
+                \draw [fill=black] (-10.01970781653209,-1.6852884375260133) circle (0.6pt);
+                \draw[color=black] (-10.3,-2) node {$A'$};
+                \draw [fill=black] (-1.3189016461474612,3.1366800387328815) circle (0.6pt);
+                \draw[color=black] (-1.2,3.59) node {$B'$};
+                \draw [fill=black] (-5.070211739044405,1.0577118766572449) circle (0.6pt);
+                \draw[color=black] (-5.25,1.41) node {$C'$};
+                \draw [fill=black] (-1.9989682794330506,2.759788541181722) circle (0.6pt);
+                \draw[color=black] (-1.84,2.41) node {$D$};
+                \draw [fill=black] (-7.010285157420316,-0.01747273058966406) circle (0.6pt);
+                \draw[color=black] (-7.08,0.23) node {$E$};
+                \draw [fill=black] (0.12994876810252365,3.939629890449809) circle (0.6pt);
+                \draw[color=black] (0.28,4.29) node {$F$};
+                \end{scriptsize}
+                \end{tikzpicture}
+            \end{center}
+
+            Bây giờ, ta sẽ chỉ ra mệnh đề đảo vẫn đúng: nếu ta có các điểm \(A'\), \(B'\), \(C'\) lần lượt nằm trên các đường thẳng \(BC\), \(CA\), \(AB\) (trong đó có đúng một điểm nằm ngoài đoạn thẳng tương ứng của nó) thỏa mãn
+            \[\frac{\overline{BA'}}{\overline{A'C}} \cdot \frac{\overline{CB'}}{\overline{B'A}} \cdot \frac{\overline{AC'}}{\overline{C'B}} = -1\]
+            thì \(A'\), \(B'\), \(C'\) thẳng hàng. Thật vậy, giả sử ngược lại rằng các điểm \(A'\), \(B'\), \(C'\) không thẳng hàng. Gọi \(A_0\) là giao điểm của \(B'C'\) và \(BC\).
+
+            Theo mệnh đề thuận, ta có
+            \[\frac{\overline{BA_0}}{\overline{A_0C}} \cdot \frac{\overline{CB'}}{\overline{B'A}} \cdot \frac{\overline{AC'}}{\overline{C'B}} = -1.\]
+            Kết hợp với tỉ lệ giả thiết, ta thu được \(\dfrac{\overline{BA'}}{\overline{A'C}} = \dfrac{\overline{BA_0}}{\overline{A_0C}}\). Điều này xảy ra khi và chỉ khi \(A'\) trùng \(A_0\), vô lí. Vì thế giả sử sai, hay ta có mệnh đề đảo đúng.
+
+            Vì vậy, định lí Menelaus được chứng minh.
+        \end{proof}
+
+        \begin{theorem}
+            (\textit{Menelaus lượng giác}) Cho tam giác \(ABC\) và các điểm \(A'\), \(B'\), \(C'\) lần lượt nằm trên các đường thẳng \(BC\), \(CA\), \(AB\) của tam giác, sao cho có đúng một điểm nằm ngoài đoạn thẳng tương ứng của nó, hoặc cả ba điểm đều nằm ngoài đoạn thẳng tương ứng của nó. Khi đó các đường thẳng \(AA'\), \(BB'\), \(CC'\) đồng quy khi và chỉ khi
+            \[\frac{\sin (AA';AB)}{\sin (AA';AC)} \cdot \frac{\sin (BB';BC)}{\sin (BB';BA)} \cdot \frac{\sin (CC';CA)}{\sin (CC';CB)} = -1.\]
+        \end{theorem}
+
+        \begin{proof}
+            Ta chứng minh tương tự như định lí Ceva lượng giác.
+        \end{proof}
+
+\section{Tỉ số kép - Hàng điểm điều hòa - Tứ giác điều hòa}
+
+    \subsection{Tỉ số đơn, tỉ số kép}
+
+    \subsubsection*{Tỉ số đơn - tỉ số kép của hàng điểm}
+
+        \begin{definition}
+            Cho ba điểm \(A\), \(B\), \(C\) thẳng hàng với \(B\) không trùng \(C\). Tỉ số đơn của \(A\), \(B\), \(C\) là một số thực, kí hiệu là \((A,B;C)\), được xác định như sau: \((A,B;C) = \dfrac{\overline{CA}}{\overline{CB}}\). 
+        \end{definition}
+
+        \begin{definition}
+            Bộ bốn điểm đôi một khác nhau, có kể thứ tự, cùng thuộc một đường thẳng được gọi là hàng điểm. Đường thẳng chứa bốn điểm đó được gọi là giá của hàng điểm.
+        \end{definition}
+
+        \begin{definition}
+            Tỉ số kép của hàng điểm \(A\), \(B\), \(C\), \(D\) là một số thực (khác 1), kí hiệu là \((A,B;C,D)\), được xác định như sau: \((A,B;C,D) = \dfrac{\overline{CA}}{\overline{CB}} : \dfrac{\overline{DA}}{\overline{DB}} = \dfrac{(A,B;C)}{(A,B;D)}\).
+        \end{definition}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+                \draw [line width=0.4pt] (-4,0)-- (4,0);
+                \begin{scriptsize}
+                    \draw [fill=black] (-4,0) circle (0.6pt);
+                    \draw[color=black] (-3.9033559654447316,0.2062325469819677) node {$A$};
+                    \draw [fill=black] (1,0) circle (0.6pt);
+                    \draw[color=black] (1.090159019603703,0.2062325469819677) node {$B$};
+                    \draw [fill=black] (-2,0) circle (0.6pt);
+                    \draw[color=black] (-1.9082564448595605,0.2062325469819677) node {$C$};
+                    \draw [fill=black] (4,0) circle (0.6pt);
+                    \draw[color=black] (4.093474963481795,0.2062325469819677) node {$D$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{property}
+            Một số tính chất cơ bản của tỉ số kép từ định nghĩa trên:
+            \begin{itemize}
+                \itemsep 0.25cm
+                \item \((A,B;C,D) = (C,D;A,B) = (B,A;D,C) = (D,C;A,B)\);
+                \item \((A,B;C,D) = \dfrac{1}{(B,A;C,D)}\);
+                \item \((A,B;C,D) = 1 - (A,C;B,D) = 1 - (D,B;C,A)\);
+                \item \((A,B;C,D) \neq 1\);
+                \item Nếu \((A,B;C,D) = (A',B;C,D)\) thì \(A \equiv A'\) và tương tự cho các điểm \(B\), \(C\), \(D\).
+            \end{itemize}
+        \end{property}
+
+    \subsubsection*{Tỉ số kép của chùm đường thẳng}
+
+        \begin{definition}
+            Một tập hợp các đường thẳng đồng quy được gọi là chùm đầy đủ đường thẳng. Điểm đồng quy được gọi là tâm của chùm.
+        \end{definition}
+
+        \begin{definition}
+            Bộ bốn đường thẳng đôi một khác nhau, có kể đến thứ tự, cùng thuộc một chùm đầy đủ đường thẳng được gọi là chùm đường thẳng.
+        \end{definition}
+
+        \begin{theorem}
+            Cho chùm đường thẳng \(a\), \(b\), \(c\), \(d\) tâm \(O\). Một đường thẳng \(\Delta\) không đi qua \(O\) lần lượt cắt \(a\), \(b\), \(c\), \(d\) tại \(A\), \(B\), \(C\), \(D\). Đường thẳng \(\Delta'\) không đi qua \(O\) lần lượt cắt \(a\), \(b\), \(c\) tại \(A'\), \(B'\), \(C'\). Khi đó \(\Delta' \parallel d\) khi và chỉ khi \((A,B;C,D) = (A',B';C')\).
+        \end{theorem}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+                \draw [line width=0.4pt] (-4,0)-- (5,0);
+                \draw [line width=0.4pt] (-1,5)-- (-4,0);
+                \draw [line width=0.4pt] (-1,5)-- (0.5,0);
+                \draw [line width=0.4pt] (-1,5)-- (-2,0);
+                \draw [line width=0.4pt] (-1,5)-- (5,0);
+                \draw [line width=0.4pt] (-1.9,3.5)-- (-0.1,2);
+                \draw [line width=0.4pt] (-3.3333333333333335,1.1111111111111112)-- (1.3333333333333333,-2.7777777777777777);
+                \draw [line width=0.4pt] (0.5,0)-- (1.3333333333333333,-2.7777777777777777);
+                \begin{scriptsize}
+                    \draw [fill=black] (-4,0) circle (0.6pt);
+                    \draw[color=black] (-4.181219366388895,0.2502841361497203) node {$A$};
+                    \draw [fill=black] (0.5,0) circle (0.6pt);
+                    \draw[color=black] (0.6099032462218028,0.2502841361497203) node {$B$};
+                    \draw [fill=black] (-2,0) circle (0.6pt);
+                    \draw[color=black] (-1.7500096643576147,0.2502841361497203) node {$C$};
+                    \draw [fill=black] (5,0) circle (0.6pt);
+                    \draw[color=black] (5.11556023621959,0.2502841361497203) node {$D$};
+                    \draw[color=black] (1.6563784180922567,-0.15493778897916096) node {$\Delta$};
+                    \draw [fill=black] (-1,5) circle (0.6pt);
+                    \draw[color=black] (-0.8871376246484298,5.2501099573085375) node {$O$};
+                    \draw[color=black] (-2.645797288486276,2.7938001788903972) node {$a$};
+                    \draw[color=black] (-0.4220375482615614,2.6048532728582328) node {$b$};
+                    \draw[color=black] (-1.6719940035512704,2.7211282919549493) node {$c$};
+                    \draw[color=black] (1.9034628336727806,2.388578253761516) node {$d$};
+                    \draw [fill=black] (-1.9,3.5) circle (0.6pt);
+                    \draw[color=black] (-1.9301315130996289,3.75306908643831) node {$A'$};
+                    \draw [fill=black] (-0.1,2) circle (0.6pt);
+                    \draw[color=black] (0.07213128289948627,2.2560282155680826) node {$B'$};
+                    \draw [fill=black] (-1.3857142857142857,3.0714285714285716) circle (0.6pt);
+                    \draw[color=black] (-1.106893927164402,3.231572142212712) node {$C'$};
+                    \draw [fill=black] (-3.3333333333333335,1.1111111111111112) circle (0.6pt);
+                    \draw[color=black] (-3.3463629874860548,1.3694311949556182) node {$A''$};
+                    \draw [fill=black] (1.3333333333333333,-2.7777777777777777) circle (0.6pt);
+                    \draw[color=black] (1.569172153769719,-2.52578194478439) node {$B''$};
+                    \draw[color=black] (-0.6981907186162645,2.2248532728582328) node {$\Delta'$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Qua \(C\) kẻ đường thẳng song song với \(d\), cắt \(a\) và \(b\) lần lượt tại \(A''\) và \(B''\). Theo định nghĩa của tỉ số kép và định lí Thalès, ta có
+            \begin{equation}
+                (A,B;C,D) = \frac{\overline{CA}}{\overline{CB}} : \frac{\overline{DA}}{\overline{DB}} = \frac{\overline{CA}}{\overline{DA}} : \frac{\overline{CB}}{\overline{DB}} = \frac{\overline{CA''}}{\overline{DO}} : \frac{\overline{CB''}}{\overline{DO}} = \frac{\overline{CA''}}{\overline{CB''}} = (A'',B'';C).
+                \label{crossratio1}
+            \end{equation}
+            Nói cách khác, \((A,B;C,D) = (A',B';C')\) xảy ra khi và chỉ khi \((A'',B'';C) = (A',B';C')\). Điều này xảy ra khi và chỉ khi \(\Delta' \parallel A''B'' \parallel d\).
+        \end{proof}
+
+        Từ đó, ta dẫn đến định lí sau:
+
+        \begin{theorem}
+            Cho chùm đường thẳng \(a\), \(b\), \(c\), \(d\) tâm \(O\). Một đường thẳng \(\Delta\) không đi qua \(O\) lần lượt cắt \(a\), \(b\), \(c\), \(d\) tại \(A\), \(B\), \(C\), \(D\). Khi đó \((A,B;C,D)\) không phụ thuộc vào cách chọn \(\Delta\).
+        \end{theorem}
+
+        \begin{definition}
+            Số không đổi được đề cập trong định lí trên được gọi là tỉ số kép của chùm \(a\), \(b\), \(c\), \(d\), kí hiệu: \((a,b;c,d) = (A,B;C,D)\).
+        \end{definition}
+
+        Ngoài ra, nếu ta biết bốn điểm \(A\), \(B\), \(C\), \(D\) lần lượt nằm trên chùm \(a\), \(b\), \(c\), \(d\) (có tâm \(O\)) thì ta có thể viết chùm tỉ số kép của chùm \(a\), \(b\), \(c\), \(d\) dưới dạng \(O(A,B;C,D)\).
+
+    \subsubsection*{Phép chiếu xuyên tâm}
+
+        \begin{definition}
+            Cho hai đường thẳng \(d\), \(d'\) và một điểm \(S\) không thuộc \(d\), \(d'\). Xét ánh xạ \(f: d \to d'\), được xác định như sau: \(f(M) = M'\) sao cho \(S\), \(M\), \(M'\) thẳng hàng. Khi đó \(f\) được gọi là phép chiếu xuyên tâm. Điểm \(S\) được gọi là tâm chiếu của \(f\).
+        \end{definition}
+
+        Nhờ phép chiếu xuyên tâm, ta có thể phát biểu lại định lí về tỉ số kép của chùm đường thẳng: \textit{Phép chiếu xuyên tâm bảo toàn tỉ số kép.} Nói cách khác, xét hai đường thẳng \(\Delta\) và \(\Delta'\), bốn điểm \(A\), \(B\), \(C\), \(D\) thuộc \(\Delta\) và một điểm \(O\) không thuộc \(\Delta\); qua phép chiếu \(f\) xuyên tâm \(O\)
+        \begin{equation}
+            \begin{aligned}
+                f: \Delta & \to \Delta' \\
+                A & \mapsto A' \\
+                B & \mapsto B' \\
+                C & \mapsto C' \\
+                D & \mapsto D'
+            \end{aligned}
+            \notag
+        \end{equation}
+        thì \((A,B;C,D) = (A',B';C',D')\). Trong trường hợp \(\Delta \parallel d\) thì \(D\) được xem là trùng với điểm vô cùng của \(d\), kí hiệu là \(\infty\). Điều này gợi ra một số nhận xét như sau:
+        \begin{itemize}
+            \item Trong hình học xạ ảnh, mọi phương trên mặt phẳng đều có một điểm vô cùng ứng với phương đó. Vì vậy các đường thẳng song song có thể coi là đồng quy tại điểm vô cùng ứng với phương của các đường thẳng đó.
+            \item Phép chiếu song song có thể được coi là phép chiếu xuyên tâm, với tâm chiếu là điểm vô cùng.
+            \item Bằng phép chiếu xuyên tâm, hệ thức (\ref{crossratio1}) tương đương \((A,B;C,D) = (A',B';C',\infty) = (A',B';C')\).
+            \item Nhờ những cách chọn tâm chiếu khác nhau, bắt đầu từ hàng điểm \(A\), \(B\), \(C\), \(D\), ta có thể nhận vô số hàng điểm có cùng tỉ số kép với \(A\), \(B\), \(C\), \(D\).
+        \end{itemize}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.8]
+                \draw [line width=0.4pt] (-4,0)-- (5,0);
+                \draw [line width=0.4pt] (-1,5)-- (-4,0);
+                \draw [line width=0.4pt] (-1,5)-- (0.5,0);
+                \draw [line width=0.4pt] (-1,5)-- (-2,0);
+                \draw [line width=0.4pt] (-1,5)-- (5,0);
+                \draw [line width=0.4pt] (-2.0128560714475725,3.3119065475873795)-- (3.6420385629574015,5.143816250763612);
+                \draw [line width=0.4pt] (3.6420385629574015,5.143816250763612)-- (-0.3276958737319833,2.7589862457732774);
+                \draw [line width=0.4pt] (-1.3792006089321895,3.1039969553390514)-- (3.6420385629574015,5.143816250763612);
+                \draw [line width=0.4pt] (3.6420385629574015,5.143816250763612)-- (2.99908046797846,1.6674329433512831);
+                \draw [line width=0.4pt] (-2.0128560714475725,3.3119065475873795)-- (2.99908046797846,1.6674329433512831);
+                \draw [line width=0.4pt] (1.3394362976488332,4.397885565033304)-- (3.352797135331736,3.579928839340777);
+                \begin{scriptsize}
+                    \draw [fill=black] (-4,0) circle (0.6pt);
+                    \draw[color=black] (-4.181219366388895,0.2502841361497203) node {$A$};
+                    \draw [fill=black] (0.5,0) circle (0.6pt);
+                    \draw[color=black] (0.6099032462218028,0.2502841361497203) node {$B$};
+                    \draw [fill=black] (-2,0) circle (0.6pt);
+                    \draw[color=black] (-1.7500096643576147,0.2502841361497203) node {$C$};
+                    \draw [fill=black] (5,0) circle (0.6pt);
+                    \draw[color=black] (5.11556023621959,0.2502841361497203) node {$D$};
+                    \draw [fill=black] (-1,5) circle (0.6pt);
+                    \draw[color=black] (-0.8957100784057308,5.224567259618038) node {$O$};
+                    \draw [fill=black] (-2.0128560714475725,3.3119065475873795) circle (0.6pt);
+                    \draw[color=black] (-2.3499951340836296,3.538227914652984) node {$A'$};
+                    \draw [fill=black] (-0.3276958737319833,2.7589862457732774) circle (0.6pt);
+                    \draw[color=black] (-0.18672818714156044,2.989187197687618) node {$B'$};
+                    \draw [fill=black] (-1.3792006089321895,3.1039969553390514) circle (0.6pt);
+                    \draw[color=black] (-1.16525200289803537,3.3290695462852256) node {$C'$};
+                    \draw [fill=black] (2.99908046797846,1.6674329433512831) circle (0.6pt);
+                    \draw[color=black] (3.256733308719593,1.891105763756886) node {$D'$};
+                    \draw [fill=black] (3.6420385629574015,5.143816250763612) circle (0.6pt);
+                    \draw[color=black] (3.797280811845854,5.368363637870871) node {$O'$};
+                    \draw [fill=black] (1.3394362976488332,4.397885565033304) circle (0.6pt);
+                    \draw[color=black] (1.3488283518924484,4.623236950560732) node {$A''$};
+                    \draw [fill=black] (1.9723594452711706,4.140751455858925) circle (0.6pt);
+                    \draw[color=black] (1.9763034569957243,3.874861388124018) node {$B''$};
+                    \draw [fill=black] (1.5726347893617216,4.303145332111405) circle (0.6pt);
+                    \draw[color=black] (1.5841315163061768,4.031730164399837) node {$C''$};
+                    \draw [fill=black] (3.352797135331736,3.579928839340777) circle (0.6pt);
+                    \draw[color=black] (3.6619776474321254,3.612748273135667) node {$D''$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+    \subsubsection*{Tỉ số kép của bốn điểm trên đường tròn}
+
+        \begin{theorem}
+            Với mọi chùm \(O(A,B;C,D)\), ta có
+            \[O(A,B;C,D) = \frac{\sin(\overrightarrow{OC},\overrightarrow{OA})}{\sin(\overrightarrow{OC},\overrightarrow{OB})} : \frac{\sin(\overrightarrow{OD},\overrightarrow{OA})}{\sin(\overrightarrow{OD},\overrightarrow{OB})}\]
+        \end{theorem}
+
+        Chú ý rằng trong cách phát biểu của Định lí 3.3, các điểm \(A\), \(B\), \(C\), \(D\) không nhất thiết cùng nằm trên một đường thẳng.
+
+        \begin{proof}
+            Theo định lí sine, ta có \(\dfrac{\overline{CA}}{\overline{CB}} = \dfrac{OA \cdot \sin(\overrightarrow{OC},\overrightarrow{OA})}{OB \cdot \sin(\overrightarrow{OC},\overrightarrow{OB})}\) và \(\dfrac{\overline{DA}}{\overline{DB}} = \dfrac{OA \cdot \sin(\overrightarrow{OD},\overrightarrow{OA})}{OB \cdot \sin(\overrightarrow{OD},\overrightarrow{OB})}\).
+            
+            Do đó \(O(A,B;C,D) = \dfrac{\overline{CA}}{\overline{CB}} : \dfrac{\overline{DA}}{\overline{DB}} = \dfrac{\sin(\overrightarrow{OC},\overrightarrow{OA})}{\sin(\overrightarrow{OC},\overrightarrow{OB})} : \dfrac{\sin(\overrightarrow{OD},\overrightarrow{OA})}{\sin(\overrightarrow{OD},\overrightarrow{OB})}\).
+        \end{proof}
+
+        \begin{theorem}
+            Cho bốn điểm phân biệt \(A\), \(B\), \(C\), \(D\) cố định trên đường tròn \((O)\) và điểm \(M\) chuyển động trên \((O)\). Khi đó \(M(A,B;C,D)\) không đổi. Trong trường hợp \(M\) trùng với một trong bốn điểm trên, chẳng hạn \(A\), thì \(MA\) được coi là tiếp tuyến của \((O)\) tại \(A\).
+        \end{theorem}
+
+        \begin{proof}
+            Đây là hệ quả trực tiếp của Định lí 3.3.
+        \end{proof}
+
+        \begin{definition}
+            Tỉ số kép \(M(A,B;C,D)\) được gọi là tỉ số kép của bốn điểm phân biệt \(A\), \(B\), \(C\), \(D\) trên đường tròn \((O)\), kí hiệu: \((A,B;C,D)\).
+        \end{definition}
+
+    \subsubsection*{Tính chất}
+
+        \begin{property}
+            Hai đường thẳng \(d\) và \(d'\) cắt nhau tại \(O\). Trên \(d\) lấy các điểm \(A\), \(B\), \(C\); trên \(d'\) lấy các điểm \(A'\), \(B'\), \(C'\). Khi đó \((O,A;B,C) = (O,A';B',C')\) khi và chỉ khi \(AA'\), \(BB'\), \(CC'\) đôi một song song hoặc đồng quy.
+        \end{property}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+                \draw [line width=0.4pt] (-1,5)-- (-0.5,0);
+                \draw [line width=0.4pt] (-1,5)-- (2,0);
+                \draw [line width=0.4pt] (2,0)-- (-4.425956080427346,0);
+                \draw [line width=0.4pt] (0.21343176179704182,2.977613730338264)-- (-4.425956080427346,0);
+                \draw [line width=0.4pt] (0.9637779130218644,1.7270368116302262)-- (-4.425956080427346,0);
+                \begin{scriptsize}
+                    \draw [fill=black] (-1,5) circle (0.6pt);
+                    \draw[color=black] (-0.904555334332078,5.225155895243506) node {$O$};
+                    \draw [fill=black] (2,0) circle (0.6pt);
+                    \draw[color=black] (2.0983136348624143,0.21616858108294626) node {$C$};
+                    \draw [fill=black] (-0.5,0) circle (0.6pt);
+                    \draw[color=black] (-0.3494030879263736-0.4,0.21616858108294626) node {$C'$};
+                    \draw [fill=black] (0.21343176179704182,2.977613730338264) circle (0.6pt);
+                    \draw[color=black] (0.3193030270623157,3.1938033572589966) node {$A$};
+                    \draw [fill=black] (-0.7367759251362644,2.367759251362645) circle (0.6pt);
+                    \draw[color=black] (-0.5891279216015642-0.4,2.58818272481641) node {$A'$};
+                    \draw [fill=black] (-4.425956080427346,0) circle (0.6pt);
+                    \draw[color=black] (-4.0494030879263736-0.4,0.21616858108294626) node {$P$};
+                    \draw [fill=black] (0.9637779130218644,1.7270368116302262) circle (0.6pt);
+                    \draw[color=black] (1.0637117211063285,1.9447108028461622) node {$B$};
+                    \draw [fill=black] (-0.6218938722259788,1.218938722259788) circle (0.6pt);
+                    \draw[color=black] (-0.4755740530185792-0.4,1.4400269424773398) node {$B'$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Gọi \(P\) là giao của \(AA'\) và \(BB'\); \(C''\) là giao của \(PC'\) và đường thẳng \(d\). Xét phép chiếu xuyên tâm \(P\) đi từ \(d'\) vào \(d\): \(O \mapsto O\), \(A' \mapsto A\), \(B' \mapsto B\), \(C' \mapsto C''\). Phép chiếu này bảo toàn tỉ số kép, hay ta có \((O,A';B',C') = (O,A;B,C'')\). Do đó \((O,A;B,C) = (O,A';B',C')\) khi và chỉ khi \((O,A;B,C) = (O,A;B,C'')\), tương đương \(C \equiv C''\) hay \(AA'\), \(BB'\), \(CC'\) đồng quy hoặc đôi một song song (đồng quy tại điểm vô cùng).
+        \end{proof}
+
+        \begin{property}
+            Cho hai chùm \(O(A,B;C,O')\) và \(O'(A,B;C,O)\). Khi đó \(A\), \(B\), \(C\) thẳng hàng khi và chỉ khi \(O(A,B;C,O') = O'(A,B;C,O)\).
+        \end{property}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+                \draw [line width=0.4pt] (-2,2)-- (0.8415101827667313,5.0348303329461865);
+                \draw [line width=0.4pt] (-2,2)-- (1.087278508444727,3.6889561685190695);
+                \draw [line width=0.4pt] (-2,2)-- (1.7609354167268358,-0.00011737683533138608);
+                \draw [line width=0.4pt] (3,3)-- (0.8415101827667313,5.0348303329461865);
+                \draw [line width=0.4pt] (3,3)-- (1.087278508444727,3.6889561685190695);
+                \draw [line width=0.4pt] (3,3)-- (1.7609354167268358,-0.00011737683533138608);
+                \draw [line width=0.4pt] (0.8415101827667313,5.0348303329461865)-- (1.7609354167268358,-0.00011737683533138608);
+                \draw [line width=0.4pt] (-2,2)-- (3,3);
+                \begin{scriptsize}
+                    \draw [fill=black] (-2,2) circle (0.6pt);
+                    \draw[color=black] (-1.9074235304080835-0.3,2.2050986199677816) node {$O$};
+                    \draw [fill=black] (0.8415101827667313,5.0348303329461865) circle (0.6pt);
+                    \draw[color=black] (0.9359313082714632,5.234141937908023) node {$A$};
+                    \draw [fill=black] (1.087278508444727,3.6889561685190695) circle (0.6pt);
+                    \draw[color=black] (1.1796474373011385,3.887900463267916) node {$B$};
+                    \draw [fill=black] (1.7609354167268358,-0.00011737683533138608) circle (0.6pt);
+                    \draw[color=black] (1.8527681746211944,0.19734193796141392-0.4) node {$C$};
+                    \draw [fill=black] (3,3) circle (0.6pt);
+                    \draw[color=black] (3.140981999492336,3.2031741959940683) node {$O'$};
+                    \draw [fill=black] (1.2760495638426517,2.6552099127685302) circle (0.6pt);
+                    \draw[color=black] (1.3653359165618435,2.8550082973802473) node {$P$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Gọi \(P\) là giao điểm của \(BC\) và \(OO'\); \(A_1\) là giao của \(OA\) và \(BC\), \(A_2\) là giao của \(O'A\) và \(BC\). Ta có \(O(A,B;C,O') = O(A_1,B;C,P)\) và \(O'(A,B;C,O) = O'(A_2,B;C,P)\). Như vậy \(O(A,B;C,O') = O'(A,B;C,O)\) khi và chỉ khi \(O(A_1,B;C,P) = O'(A_2,B;C,P)\), tương đương \(A_1 \equiv A_2 \equiv A\) hay \(A\), \(B\), \(C\) thẳng hàng.
+        \end{proof}
+
+        \begin{property}
+            Nếu hai chùm \((a,b;c,d)\), \((a',b';c',d')\) có \(a \perp a'\), \(b \perp b'\), \(c \perp c'\), \(d \perp d'\) thì \((a,b;c,d) = (a',b';c',d')\).
+        \end{property}
+
+        \begin{proof}
+            Từ giả thiết, ta có \(\sin(\vec{c};\vec{a}) \equiv \sin(\vec{c'};\vec{a'}) \pmod{2\pi}\). Theo Định lí 3.3 ta có
+            \[(a,b;c,d) = \frac{\sin(\vec{c};\vec{a})}{\sin(\vec{c};\vec{b})} : \frac{\sin(\vec{d};\vec{a})}{\sin(\vec{d};\vec{b})} \hspace{0.2cm} \text{ và } \hspace{0.2cm} (a',b';c',d') = \frac{\sin(\vec{c'};\vec{a'})}{\sin(\vec{c'};\vec{b'})} : \frac{\sin(\vec{d'};\vec{a'})}{\sin(\vec{d'};\vec{b'})}.\]
+            Kết hợp những điều trên ta thu được điều phải chứng minh.
+        \end{proof}
+
+        \begin{property}
+            Các phép biến hình thông thường (dời hình, đồng dạng, nghịch đảo) đều bảo toàn tỉ số kép.  
+        \end{property}
+
+    \subsection{Hàng điểm điều hòa, chùm điều hòa}
+
+    \subsubsection*{Hàng điểm điều hòa}
+
+        \begin{definition}
+            Một hàng điểm \(A\), \(B\), \(C\), \(D\) được gọi là một hàng điểm điều hòa nếu tỉ số kép \[(A,B;C,D) = \frac{\overline{CA}}{\overline{CB}} : \frac{\overline{DA}}{\overline{DB}}\] có giả trị bằng \(-1\). Khi đó, ta nói cặp điểm \(A\), \(B\) chia điều hòa cặp điểm \(C\), \(D\); hoặc cặp điểm \(A\), \(B\) và cặp điểm \(C\), \(D\) là hai cặp điểm liên hợp điều hòa.
+
+            Kết hợp tính chất của tỉ số kép, nếu \((A,B;C,D) = -1\) thì ta cũng có \((A,B;D,C) = (B,A;C,D) = (B,A;D,C) = (C,D;A,B) = (C,D;B,A) = (D,C;A,B) = (D,C;B,A) = -1\).
+        \end{definition}
+
+        \begin{theorem}
+            Cho hàng điểm \(A\), \(B\), \(C\), \(D\) với \(I\) là trung điểm của \(AB\). Các khẳng định sau là tương đương:
+            \vspace{-0.25cm}
+            \begin{multicols}{2}
+                \begin{enumerate}
+                    \itemsep 0.25cm
+                    \item[\textit{i)}] \((A,B;C,D) = -1\);
+                    \item[\textit{ii)}] \(\dfrac{\overline{CA}}{\overline{CB}} = -\dfrac{\overline{DA}}{\overline{DB}}\);
+                    \item[\textit{iii)}] \(\dfrac{2}{\overline{AB}} = \dfrac{1}{\overline{AC}} + \dfrac{1}{\overline{AD}}\) (\textit{hệ thức Descartes});
+                \end{enumerate}
+        
+                \columnbreak
+                
+                \begin{enumerate}
+                    \itemsep 0.25cm
+                    \item[\textit{iv)}] \(IA^2 = IB^2 = \overline{IC} \cdot \overline{ID}\) (\textit{hệ thức Newton});
+                    \item[\textit{v)}] \(\overline{CI} \cdot \overline{CD} = \overline{CA} \cdot \overline{CB}\) (\textit{hệ thức Maclaurin}).
+                \end{enumerate}
+            \end{multicols}
+        \end{theorem}
+
+        \begin{proof}
+            Biểu thức mệnh đề \textit{i} tương đương \textit{ii} là điều hiển nhiên. Ta chứng minh các biểu thức mệnh đề \textit{i} tương đương \textit{iii}, \textit{iv}, \textit{v}; tương ứng với việc chứng minh hệ thức Descartes, Newton và Maclaurin.
+
+            Trước hết, coi giá của hàng điểm \(A\), \(B\), \(C\), \(D\) như một trục số và đặt tọa độ của \(A\), \(B\), \(C\), \(D\) lần lượt là \(a\), \(b\), \(c\), \(d\). Khi đó \(-1 = (A,B;C,D) = \dfrac{a - c}{b - c} : \dfrac{a - d}{b - d}\) và tọa độ của \(I\) là \(\dfrac{a + b}{2}\).
+
+            \begin{itemize}
+                \item \textit{Chứng minh hệ thức Descartes.} Nghĩa là ta cần chứng minh \(\dfrac{2}{b - a} = \dfrac{1}{c - a} + \dfrac{1}{d - a}\). \\ Đẳng thức tương đương
+                \[\frac{1}{b - a} - \frac{1}{c - a} = \frac{1}{d - a} - \frac{1}{b - a} \Leftrightarrow \frac{c - b}{(b - a)(c - a)} = \frac{b - d}{(d - a)(b - a)} \Leftrightarrow \frac{c - a}{c - b} = -\frac{d - a}{d - b}.\]
+                Đây chính là khẳng định \textit{ii}.
+
+                \item \textit{Chứng minh hệ thức Newton.} Nghĩa là ta cần chứng minh \(\left(\dfrac{b - a}{2}\right)^2 = \left(c - \dfrac{a + b}{2}\right)\left(d - \dfrac{a + b}{2}\right)\). \\ Đẳng thức tương đương
+                \[\left(\frac{b - a}{2}\right)^2 = cd - \frac{(a + b)(c + d)}{2} + \left(\frac{a + b}{2}\right)^2 \Leftrightarrow ab + cd = \frac{(a + b)(c + d)}{2}\]
+                \[\Leftrightarrow 2ab + 2cd = ac + ad + bc + bd \Leftrightarrow (c - a)(d - b) = -(d - a)(c - b).\]
+                Đây chính là khẳng định \textit{ii}.
+
+                \item \textit{Chứng minh hệ thức Maclaurin.} Nghĩa là ta cần chứng minh 
+                \[\left(\frac{a + b}{2} - c\right)(d - c) = (a - c)(b - c) \Leftrightarrow \frac{(a + b)(c + d)}{2} = ab + cd\]
+                nhưng đây lại là đẳng thức tương đương của khẳng định \textit{iv}.
+            \end{itemize}
+            Chứng minh hoàn tất.
+        \end{proof}
+
+    \subsubsection*{Các hàng điểm điều hòa đặc biệt}
+
+        \begin{property}
+            (\textit{Hàng phân giác}) Cho tam giác \(ABC\) có \(AD\) và \(AE\) lần lượt là phân giác trong và phân giác ngoài của góc \(BAC\) (với \(\{D;E\} \in BC\)). Khi đó \((B,C;D,E) = -1\).
+        \end{property}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+                \draw [line width=0.4pt] (0,3)-- (-1,0);
+                \draw [line width=0.4pt] (-1,0)-- (6,0);
+                \draw [line width=0.4pt] (6,0)-- (0,3);
+                \draw [line width=0.4pt] (-1,0)-- (-7.242640687119284,0);
+                \draw [line width=0.4pt] (0,3)-- (1.2426406871192852,0);
+                \draw [line width=0.4pt] (0,3)-- (-7.242640687119284,0);
+                \begin{scriptsize}
+                    \draw [fill=black] (0,3) circle (0.6pt);
+                    \draw[color=black] (0.08434545529212978,3.2994487113624777) node {$A$};
+                    \draw [fill=black] (-1,0) circle (0.6pt);
+                    \draw[color=black] (-1.2072185454556022,0.29963822638645327) node {$B$};
+                    \draw [fill=black] (6,0) circle (0.6pt);
+                    \draw[color=black] (6.143966425244194,0.29963822638645327) node {$C$};
+                    \draw [fill=black] (1.2426406871192852,0) circle (0.6pt);
+                    \draw[color=black] (1.3826393182764223,0.29963822638645327) node {$D$};
+                    \draw [fill=black] (-7.242640687119284,0) circle (0.6pt);
+                    \draw[color=black] (-7.311010136277809,0.29963822638645327) node {$E$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Đây là hệ quả trực tiếp của định lí đường phân giác.
+        \end{proof}
+
+        \begin{property}
+            (\textit{Hàng tứ giác toàn phần}) Cho tam giác \(ABC\) và một điểm \(P\) bất kì không nằm trên cạnh của tam giác \(ABC\). \(AP\), \(BP\), \(CP\) cắt cạnh tam giác đối diện tại \(D\), \(E\), \(F\). Giả sử \(EF\) cắt \(BC\) tại \(K\). Khi đó \((B,C;D,K) = -1\). 
+        \end{property}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+                \draw [line width=0.4pt] (0,5)-- (-1.5,0);
+                \draw [line width=0.4pt] (-1.5,0)-- (3.5,0);
+                \draw [line width=0.4pt] (3.5,0)-- (0,5);
+                \draw [line width=0.4pt] (0,5)-- (2.0416274686844442,0);
+                \draw [line width=0.4pt] (-1.5,0)-- (1.985694295705743,2.1632938632775094);
+                \draw [line width=0.4pt] (3.5,0)-- (-0.525950959035233,3.2468301365492227);
+                \draw [line width=0.4pt] (-0.525950959035233,3.2468301365492227)-- (7.000225788874053,0);
+                \draw [line width=0.4pt] (7.000225788874053,0)-- (3.5,0);
+                \begin{scriptsize}
+                    \draw [fill=black] (0,5) circle (0.6pt);
+                    \draw[color=black] (0.12437672120547535,5.254974227581552) node {$A$};
+                    \draw [fill=black] (-1.5,0) circle (0.6pt);
+                    \draw[color=black] (-1.3771909784258947-0.3,0.2644698141008329) node {$B$};
+                    \draw [fill=black] (3.5,0) circle (0.6pt);
+                    \draw[color=black] (3.613313435054835,0.2644698141008329) node {$C$};
+                    \draw [fill=black] (1.325581956597697,1.7536145135922927) circle (0.6pt);
+                    \draw[color=black] (1.4492893973508016,2.0162987970040938) node {$P$};
+                    \draw [fill=black] (2.0416274686844442,0) circle (0.6pt);
+                    \draw[color=black] (2.155909491294976,0.2644698141008329) node {$D$};
+                    \draw [fill=black] (1.985694295705743,2.1632938632775094) circle (0.6pt);
+                    \draw[color=black] (2.0970244834662948,2.413772599847691) node {$E$};
+                    \draw [fill=black] (-0.525950959035233,3.2468301365492227) circle (0.6pt);
+                    \draw[color=black] (-0.40558834925265524-0.3,3.50314524467829) node {$F$};
+                    \draw [fill=black] (7.000225788874053,0) circle (0.6pt);
+                    \draw[color=black] (7.116971400861365,0.2644698141008329) node {$K$};
+                    \draw [fill=black] (0.9813870438783836,2.5965570141188477) circle (0.6pt);
+                    \draw[color=black] (1.0959793503787147,2.855410158562799) node {$L$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Áp dụng định lí Menelaus cho tam giác \(ABC\) và cát tuyến \(KEF\): \(\dfrac{\overline{BK}}{\overline{KC}} \cdot \dfrac{\overline{CE}}{\overline{EA}} \cdot \dfrac{\overline{AF}}{\overline{FB}} = -1\).
+
+            Áp dụng định lí Ceva cho tam giác \(ABC\) và bộ ba cevian \(AD\), \(BE\), \(CF\): \(\dfrac{\overline{BD}}{\overline{DC}} \cdot \dfrac{\overline{CE}}{\overline{EA}} \cdot \dfrac{\overline{AF}}{\overline{FB}} = 1\).
+
+            Lấy phép chia vế trái của hai hệ thức trên ta thu được \(\dfrac{\overline{DB}}{\overline{DC}} : \dfrac{\overline{KB}}{\overline{KC}} = (B,C;D,K) = -1\).
+        \end{proof}
+
+        \textbf{Nhận xét.} Nếu ta gọi \(L\) là giao điểm của \(AD\) và \(EF\) thì ta có \(-1 = (B,C;D,K) = A(B,C;D,K) = (F,E;L,K)\) và \(-1 = (B,C;D,K) = F(B,C;D,K) = (A,P;D,L)\).
+
+        \begin{property}
+            (\textit{Hàng tiếp tuyến, cát tuyến}) Cho đường tròn \((O)\) và một điểm \(P\) nằm ngoài đường tròn \((O)\). Từ \(P\) kẻ hai tiếp tuyến \(PA\), \(PB\) (với \(\{A;B\} \in (O)\)), và một cát tuyến \(PCD\) (với \(C\) nằm giữa \(P\) và \(D\)) tới \((O)\). \(AB\) cắt \(CD\) tại \(Q\). Khi đó \((P,Q;C,D) = -1\).
+        \end{property}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+                \draw [line width=0.4pt] (2.5,2.5) circle (2.5cm);
+                \draw [line width=0.4pt] (1.4583333333333333,4.7726483572157745)-- (1.4583333333333333,0.22735164278422618);
+                \draw [line width=0.4pt] (-3.5,2.5)-- (1.4583333333333333,4.7726483572157745);
+                \draw [line width=0.4pt] (-3.5,2.5)-- (1.4583333333333333,0.22735164278422618);
+                \draw [line width=0.4pt] (-3.5,2.5)-- (4.715223853805418,1.341214740544447);
+                \draw [line width=0.4pt] (-3.5,2.5)-- (2.5,2.5);
+                \draw [line width=0.4pt] (1.458333333333333,2.5)-- (0.05068097703514152,1.9991643745274605);
+                \draw [line width=0.4pt] (1.458333333333333,2.5)-- (4.715223853805418,1.341214740544447);
+                \draw [line width=0.4pt] (2.5,2.5)-- (0.05068097703514152,1.9991643745274605);
+                \draw [line width=0.4pt] (2.5,2.5)-- (4.715223853805418,1.341214740544447);
+                \begin{scriptsize}
+                    \draw [fill=black] (2.5,2.5) circle (0.6pt);
+                    \draw[color=black] (2.5995028713016626,2.700429978426544) node {$O$};
+                    \draw [fill=black] (-3.5,2.5) circle (0.6pt);
+                    \draw[color=black] (-3.4081475355345496,2.700429978426544) node {$P$};
+                    \draw [fill=black] (1.4583333333333333,4.7726483572157745) circle (0.6pt);
+                    \draw[color=black] (1.5531606282323418-0.1,4.9812209352293335) node {$A$};
+                    \draw [fill=black] (1.4583333333333333,0.22735164278422618) circle (0.6pt);
+                    \draw[color=black] (1.5531606282323418-0.1,0.4313956760402634-0.4) node {$B$};
+                    \draw [fill=black] (0.05068097703514152,1.9991643745274605) circle (0.6pt);
+                    \draw[color=black] (0.1423620982512353-0.25,2.2066504929331563-0.35) node {$C$};
+                    \draw [fill=black] (4.715223853805418,1.341214740544447) circle (0.6pt);
+                    \draw[color=black] (4.809753901605396+0.15,1.5482778456086397-0.3) node {$D$};
+                    \draw [fill=black] (1.4583333333333333,1.8006102231198107) circle (0.6pt);
+                    \draw[color=black] (1.5531606282323418+0.15,2.0067873678524997-0.45) node {$Q$};
+                    \draw [fill=black] (1.458333333333333,2.5) circle (0.6pt);
+                    \draw[color=black] (1.5531606282323418+0.15,2.700429978426544) node {$M$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Gọi \(M\) là giao điểm của \(OP\) và \(AB\). Ta có \(\overline{PM} \cdot \overline{PO} = PA^2 = \overline{PC} \cdot \overline{PD}\), hay tứ giác \(OMCD\) nội tiếp. Khi đó \(\angle PMC = \angle ODC = \angle OCD = \angle OMD\), mà \(AB \perp OP\) nên ta có \(MQ\) là phân giác trong của góc \(CMD\), đồng thời \(MP\) là phân giác ngoài của góc \(CMD\). Theo tính chất về hàng phân giác, ta thu được \((P,Q;C,D) = -1\).
+        \end{proof}
+
+        \subsubsection*{Chùm điều hòa}
+
+        \begin{definition}
+            Cho chùm \(a\), \(b\), \(c\), \(d\). Khi đó \(a\), \(b\), \(c\), \(d\) được gọi là chùm điều hòa nếu \((a,b;c,d) = -1\).
+        \end{definition}
+
+        \begin{theorem}
+            Chùm \(a\), \(b\), \(c\), \(d\) là chùm điều hòa khi và chỉ khi mọi đường thẳng song song với một đường thẳng bất kì của chùm định ra trên ba đường còn lại hai đoạn thẳng bằng nhau. 
+        \end{theorem}
+
+        \begin{theorem}
+            Cho chùm điều hòa \(a\), \(b\), \(c\), \(d\). Khi đó \(c \perp d\) khi và chỉ khi \(c\) là hai phân giác của góc tạo bởi \(a\) và \(b\) và \(d\) là hai phân giác của góc tạo bởi \(a\) và \(b\).
+        \end{theorem}
+
+        \begin{proof}
+            Gọi \(O\) là tâm của chùm. Kẻ một đường thẳng song song với \(d\) không trùng \(d\), cắt \(a\), \(b\), \(c\) lần lượt tại \(A\), \(B\), \(C\). Theo Định lí 3.6, ta có \(CA = CB\). Như vậy \(c \perp d\) khi và chỉ khi \(OC \perp AB\), tương đương tam giác \(OAB\) cân tại \(O\) hay \(OC\) là phân giác của góc \(AOB\).
+        \end{proof}
+
+    \subsection{Tứ giác điều hòa}
+
+        \begin{definition}
+            Một tứ giác nội tiếp \(ABCD\) được gọi là điều hòa nếu \((A,C;B,D) = -1\).
+        \end{definition}
+
+        \begin{theorem}
+            Cho tứ giác \(ABCD\) nội tiếp đường tròn \((O)\). Các mệnh đề sau là tương đương:
+            \begin{enumerate}
+                \item[\textit{i)}] \((A,C;B,D) = -1\);
+                \item[\textit{ii)}] \(AB \cdot CD = AD \cdot BC = \dfrac{1}{2}AC \cdot BD\);
+                \item[\textit{iii)}] \(AC\) là đường đối trung của các tam giác \(BAD\) và \(BCD\);
+                \item[\textit{iv)}] \(BD\) là đường đối trung của các tam giác \(ABC\) và \(ADC\);
+                \item[\textit{v)}] Tiếp tuyến tại \(A\) và \(C\) của \((O)\) cắt nhau trên \(BD\);
+                \item[\textit{vi)}] Tiếp tuyến tại \(B\) và \(D\) của \((O)\) cắt nhau trên \(AC\).
+            \end{enumerate}
+        \end{theorem}
+
+    \section{Đẳng giác - Cặp điểm liên hợp đẳng giác - Đường đối trung}
+
+    \subsection{Hai đường đẳng giác}
+
+        \begin{definition}
+            Cho góc \(xOy\). Hai đường thẳng \(d_1\) và \(d_2\) được gọi là hai đường đối song ứng với góc \(xOy\) khi và chỉ khi tồn tại đường thẳng \(d_3\) sao cho \(d_3 \parallel d_2\) và \(d_3\) đối xứng với \(d_1\) qua phân giác (trong hoặc ngoài) của góc \(xOy\) (hoặc ngược lại).
+        \end{definition}
+
+        \begin{definition}
+            Cho góc \(xOy\). Hai đường thẳng \(d_1\) và \(d_2\) được gọi là hai đường đẳng giác trong góc \(xOy\) nếu \(d_1\) và \(d_2\) cùng đi qua \(O\), đồng thời đối xứng nhau qua phân giác (trong hoặc ngoài) của góc \(xOy\).
+        \end{definition}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.8]
+                \draw [line width=0.4pt] (1,4)-- (-0.5,0);
+                \draw [line width=0.4pt] (1,4)-- (3.5,0);
+                \draw [line width=0.4pt] (-0.62817059681837,2.9885170755939874)-- (3.3867576728835265,2.758747084255629);
+                \draw [line width=0.4pt] (3.6769934514161933,1.5252450254918113)-- (-0.6914066877628513,0.3772003507415127);
+                \draw [line width=0.4pt] (1,4)-- (1.4009192635091374,0.0007308652582196373);
+                \draw [line width=0.4pt] (9,4)-- (7.5,0);
+                \draw [line width=0.4pt] (9,4)-- (12,0);
+                \draw [line width=0.4pt] (8.683980503139537,0.07872634511806391)-- (9.053610643372583,4.6652184614134855);
+                \draw [line width=0.4pt] (10.404776613370547,0.32537647297110833)-- (8.76168882367784,4.62337587836561);
+                \draw [line width=0.4pt] (6.991207575188804,3.7120699509581097)-- (11.464302902651015,4.353220595045339);
+                \draw [line width=0.4pt] (8.803746254435747,5.3691972711501865)-- (9.573339575529218,0);
+                \begin{scriptsize}
+                    \draw [fill=black] (1,4) circle (0.6pt);
+                    \draw[color=black] (1.1109178517181826,4.2225800424041555) node {$O$};
+                    \draw[color=black] (-0.3361147224612097+0.1,0.22196057261414998) node {$x$};
+                    \draw[color=black] (3.6645047473288748,0.22196057261414998) node {$y$};
+                    \draw[color=black] (-0.47798066110624815,3.257891659617913) node {$d_1$};
+                    \draw[color=black] (-0.5347270365642636,0.6333717946847535) node {$d_2$};
+                    \draw [fill=black] (9,4) circle (0.6pt);
+                    \draw[color=black] (9.168903166756367,4.2225800424041555) node {$O$};
+                    \draw[color=black] (7.721870592576975,0.22196057261414998) node {$x$};
+                    \draw[color=black] (12.233207441489197,0.22196057261414998) node {$y$};
+                    \draw[color=black] (8.899357883330795,0.33545332353017854) node {$d_1$};
+                    \draw[color=black] (10.61593574093576,0.5908120130912426) node {$d_2$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+        
+        \begin{theorem}
+            Cho góc \(xOy\) và hai điểm \(P\), \(Q\) bất kì nằm trong mặt phẳng. Gọi \(A\) và \(B\) lần lượt là hình chiếu vuông góc của \(P\) và \(Q\) lên \(Ox\), \(C\) và \(D\) lần lượt là hình chiếu vuông góc của \(P\) và \(Q\) lên \(Oy\). Khi đó, \(OP\) và \(OQ\) là hai đường đẳng giác trong góc \(xOy\) khi và chỉ khi \(A\), \(B\), \(C\), \(D\) đồng viên.
+        \end{theorem}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=1.2]
+                \draw [line width=0.4pt] (1,4)-- (-0.5,0);
+                \draw [line width=0.4pt] (1,4)-- (3.5,0);
+                \draw [line width=0.4pt] (1,4)-- (0.8738359403971871,1.1473177966639894);
+                \draw [line width=0.4pt,dash pattern=on 3pt off 3pt] (1.1768006640310409,1.6102295772516924) circle (1.1404905956820355cm);
+                \draw [line width=0.4pt] (0.8738359403971871,1.1473177966639894)-- (1.4797653876648935,2.073141357839396);
+                \draw [line width=0.4pt] (1,4)-- (1.4797653876648935,2.073141357839396);
+                \draw [line width=0.4pt] (0.8738359403971871,1.1473177966639894)-- (0.04657740525356755,1.4575397473428469);
+                \draw [line width=0.4pt] (1.4797653876648935,2.073141357839396)-- (0.4256613846182129,2.468430358981901);
+                \draw [line width=0.4pt] (0.8738359403971871,1.1473177966639894)-- (2.246665018464833,2.005335970456268);
+                \draw [line width=0.4pt] (1.4797653876648935,2.073141357839396)-- (2.0007694424499607,2.3987688920800627);
+                \draw [line width=0.4pt] (0.04657740525356755,1.4575397473428469)-- (-0.7806811298900516,1.7677616980217041);
+                \draw [line width=0.4pt] (2.246665018464833,2.005335970456268)-- (3.6194940965324776,2.863354144248546);
+                \draw [line width=0.4pt] (1,4)-- (-0.7806811298900516,1.7677616980217041);
+                \draw [line width=0.4pt] (1,4)-- (3.6194940965324776,2.863354144248546);
+                \draw [line width=0.4pt] (1.4797653876648935,2.073141357839396)-- (-0.7806811298900516,1.7677616980217041);
+                \draw [line width=0.4pt] (1.4797653876648935,2.073141357839396)-- (3.6194940965324776,2.863354144248546);
+                \draw [line width=0.4pt] (1.1768006640310404,1.6102295772516926)-- (0.04657740525356755,1.4575397473428469);
+                \draw [line width=0.4pt] (1.1768006640310404,1.6102295772516926)-- (2.246665018464833,2.005335970456268);
+                \draw [line width=0.4pt] (1.1768006640310404,1.6102295772516926)-- (0.4256613846182129,2.468430358981901);
+                \draw [line width=0.4pt] (1.1768006640310404,1.6102295772516926)-- (2.0007694424499607,2.3987688920800627);
+                \begin{scriptsize}
+                    \draw [fill=black] (1,4) circle (0.6pt);
+                    \draw[color=black] (1.0654650304992417,4.137904258191442) node {$O$};
+                    \draw[color=black] (-0.3933001102093918-0.2,0.13277393103881938) node {$x$};
+                    \draw[color=black] (3.6031984705485804,0.13277393103881938) node {$y$};
+                    \draw [fill=black] (0.8738359403971871,1.1473177966639894) circle (0.6pt);
+                    \draw[color=black] (0.9446205809730827-0.1,1.280796201537308-0.3) node {$P$};
+                    \draw [fill=black] (0.04657740525356755,1.4575397473428469) circle (0.6pt);
+                    \draw[color=black] (0.11597292707942103-0.25,1.5915390717474251-0.2) node {$A$};
+                    \draw [fill=black] (2.246665018464833,2.005335970456268) circle (0.6pt);
+                    \draw[color=black] (2.31706825773446+0.2,2.1353390946151305-0.2) node {$C$};
+                    \draw [fill=black] (1.4797653876648935,2.073141357839396) circle (0.6pt);
+                    \draw[color=black] (1.5488428286038776,2.2043930657729343) node {$Q$};
+                    \draw [fill=black] (0.4256613846182129,2.468430358981901) circle (0.6pt);
+                    \draw[color=black] (0.49576976844734927-0.2,2.6014533999303064) node {$B$};
+                    \draw [fill=black] (2.0007694424499607,2.3987688920800627) circle (0.6pt);
+                    \draw[color=black] (2.066747612287416,2.5323994287725022) node {$D$};
+                    \draw [fill=black] (1.1768006640310404,1.6102295772516926) circle (0.6pt);
+                    \draw[color=black] (1.24673170478848-0.05,1.746910506852484) node {$I$};
+                    \draw [fill=black] (-0.7806811298900516,1.7677616980217041) circle (0.6pt);
+                    \draw[color=black] (-0.7126747268142406-0.1,1.9022819419575425) node {$K$};
+                    \draw [fill=black] (3.6194940965324776,2.863354144248546) circle (0.6pt);
+                    \draw[color=black] (3.689515934495837,2.998513734087678) node {$L$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Gọi \(I\) là trung điểm của đoạn thẳng \(PQ\); \(K\) và \(L\) lần lượt là điểm đối xứng của \(P\) qua tia \(Ox\) và \(Oy\). Dễ dàng chỉ ra được \(OP = OK = OL\).
+
+            \begin{enumerate}[leftmargin=1.25cm]
+                \item[Thuận.] Giả sử \(OP\) và \(OQ\) là hai đường đẳng giác trong góc \(xOy\). Suy ra \(\angle KOQ = \angle KOx + \angle xOQ = \angle POx + \angle yOP = \angle QOy + \angle yOL = \angle QOL\). Khi đó hai tam giác \(OKQ\) và \(OLQ\) đồng dạng, suy ra \(QK = QL\). Theo tính chất của đường trung bình trong các tam giác \(PKQ\) và \(PLQ\), \(IA = \dfrac{1}{2}QK\) và \(IC = \dfrac{1}{2}QL\). Suy ra \(IA = IC\).\\
+                Mặt khác, do \(I\) là trung điểm \(PQ\) và \(PA \perp Ox\), \(QB \perp Ox\) nên \(I\) thuộc đường trung trực của đoạn thẳng \(AB\), kéo theo \(IA = IB\). Tương tự, \(IC = ID\), do đó \(IA = IB = IC = ID\), hay bốn điểm \(A\), \(B\), \(C\), \(D\) cùng thuộc đường tròn tâm \(I\).
+                \item[Đảo.] Giả sử bốn điểm \(A\), \(B\), \(C\), \(D\) đồng viên. Như lập luận trên, ta có \(IA = IB\) và \(IC = ID\), suy ra \(I\) là tâm đường tròn ngoại tiếp tứ giác \(ABCD\). Do đó \(IA = IC\), suy ra \(QK = QL\). Khi đó hai tam giác \(OKQ\) và \(OLQ\) đồng dạng, suy ra \(\angle KOQ = \angle LOQ\). Từ đó
+                \[2 \angle POx = \angle POK = \angle QOK - \angle POQ = \angle QOL - \angle POQ = \angle POy + \angle QOy - \angle POQ = 2 \angle QOy\]
+                hay \(OP\) và \(OQ\) là hai đường đẳng giác trong góc \(xOy\).
+            \end{enumerate}
+            
+        \end{proof}
+
+        \begin{theorem}
+            (\textit{Định lí Steiner}) Cho tam giác \(ABC\) và hai điểm \(P\), \(Q\) nằm trên đường thẳng \(BC\). Đẳng thức
+            \[\frac{BP}{CP} \cdot \frac{BQ}{CQ} = \frac{AB^2}{AC^2}\]
+            đúng khi và chỉ khi \(AP\), \(AQ\) là hai đường đẳng giác trong góc \(BAC\).
+        \end{theorem}
+
+        \begin{proof}
+            Áp dụng công thức tính diện tích, ta có
+            \[S[ABP] \cdot S[ABQ] = \frac{1}{2} BA \cdot BP \cdot \sin \angle ABC \cdot \frac{1}{2} BA \cdot BQ \cdot \sin \angle ABC = \frac{1}{4} AB^2 \left(\sin \angle ABC\right)^2 \cdot BP \cdot BQ \text{;}\]
+            \[S[ACP] \cdot S[ACQ] = \frac{1}{2} CA \cdot CP \cdot \sin \angle ACB \cdot \frac{1}{2} CA \cdot CQ \cdot \sin \angle ACB = \frac{1}{4} AC^2 \left(\sin \angle ACB\right)^2 \cdot CP \cdot CQ \text{.}\]
+            Xét tỉ số
+            \[\frac{S[ABP] \cdot S[ABQ]}{S[ACP] \cdot S[ACQ]} = \frac{AB^2 \left(\sin \angle ABC\right)^2 \cdot BP \cdot BQ}{AC^2 \left(\sin \angle ACB\right)^2 \cdot CP \cdot CQ}\]
+            Tương đương
+            \[\frac{\frac{1}{2} AB \cdot AP \cdot \sin \angle BAP \cdot \frac{1}{2} AB \cdot AQ \cdot \sin \angle BAQ}{\frac{1}{2} AC \cdot AP \cdot \sin \angle CAP \cdot \frac{1}{2} AC \cdot AQ \cdot \sin \angle CAQ} = \frac{AB^2 \left(\sin \angle ABC\right)^2 \cdot BP \cdot BQ}{AC^2 \left(\sin \angle ACB\right)^2 \cdot CP \cdot CQ}.\]
+            Hai đường \(AP\), \(AQ\) đẳng giác trong góc \(BAC\) tương đương \(\sin \angle BAP = \sin \angle CAQ\) và \(\sin \angle BAQ = \sin \angle CAP\). Phương trình trên tương đương
+            \(\dfrac{BP \cdot BQ}{CP \cdot CQ} = \dfrac{\left(\sin \angle ACB\right)^2}{\left(\sin \angle ABC\right)^2} = \dfrac{AB^2}{AC^2}\), theo định lí sine.
+        \end{proof}
+
+        \begin{property}
+            Cho tam giác \(ABC\) và hai điểm \(P\), \(Q\) nằm trên đường thẳng \(BC\). Khi đó, đường tròn \((APQ)\) tiếp xúc với đường tròn \((ABC)\) khi và chỉ khi \(AP\), \(AQ\) là hai đường đẳng giác trong góc \(BAC\).
+        \end{property}
+
+        \begin{proof}
+            Tại \(A\), kẻ tiếp tuyến \(Ax\) của đường tròn ngoại tiếp tam giác \(ABC\). Kéo dài \(AP\) và \(AQ\), cắt \((ABC)\) tương ứng tại \(M\) và \(N\).
+
+            \begin{enumerate}[leftmargin=1.25cm]
+                \item[Thuận.] Giả sử \(AP\), \(AQ\) là hai đường đẳng giác trong góc \(BAC\). Khi đó \(\angle BAM = \angle CAN\). Suy ra
+                \[\angle xAP = \angle xAM = \angle ACM = \angle ACB + \angle BCM = \angle ACB + \angle CAN = \angle AQP\]
+                hay \(Ax\) là tiếp tuyến tại \(A\) của đường tròn ngoại tiếp tam giác \(APQ\). Từ đó, đường tròn \((APQ)\) tiếp xúc với đường tròn \(ABC\).
+                \item[Đảo.] Giả sử đường tròn \((APQ)\) tiếp xúc với đường tròn \((ABC)\). Khi đó \(\angle xAM = \angle ACM = \angle AQP\), suy ra \(\angle ACB + \angle BAM = \angle ACB + \angle BCM = \angle ACB + \angle CAN\), hay \(\angle BAM = \angle CAN\). Từ đó \(AP\), \(AQ\) là hai đường đẳng giác trong góc \(BAC\).
+            \end{enumerate}
+        \end{proof}
+
+        \subsection{Cặp điểm liên hợp đẳng giác - Đường tròn pedal}
+
+        Để định nghĩa cặp điểm liên hợp đẳng giác, ta không thể không nhắc đến định lí sau:
+        
+        \begin{theorem}
+            Cho tam giác \(ABC\) và một điểm \(P\) bất kì trong mặt phẳng. Khi đó các đường lần lượt đẳng giác với \(AP\), \(BP\), \(CP\) trong các góc \(A\), \(B\), \(C\) tương ứng của tam giác \(ABC\) đồng quy tại một điểm \(Q\).
+        \end{theorem}
+
+        \begin{proof}
+            Gọi \(Q\) là giao điểm của đường đẳng giác với \(AP\) trong \(\angle BAC\) và đường đẳng giác với \(BP\) trong \(\angle ABC\); \(I\) là trung điểm của đoạn thẳng \(PQ\); \(X\), \(Y\), \(Z\) là hình chiếu của \(P\) trên \(BC\), \(CA\), \(AB\); \(X'\), \(Y'\), \(Z'\) là hình chiếu của \(Q\) trên \(BC\), \(CA\), \(AB\).\\
+            Theo Định lí 4.1, các bộ điểm \(Y\), \(Y'\), \(Z\), \(Z'\) và \(X\), \(X'\), \(Z\), \(Z'\) cùng thuộc đường tròn tâm \(I\), tức là \(X\), \(Y\), \(Z\), \(X'\), \(Y'\), \(Z'\) cùng thuộc đường tròn \((I)\). Cũng theo Định lí 4.1, ta thu được \(CP\) và \(CQ\) là hai đường đẳng giác trong \(\angle ACB\).
+        \end{proof}
+
+        Từ Định lí 4.3 ta có một số định nghĩa sau:
+
+        \begin{definition}
+            Cặp điểm \(P\) và \(Q\) như trên được gọi là cặp điểm liên hợp đẳng giác trong tam giác \(ABC\).
+        \end{definition}
+
+        \begin{definition}
+            Gọi \(X\), \(Y\), \(Z\) lần lượt là hình chiếu vuông góc của \(P\) trên \(BC\), \(CA\), \(AB\); \(X'\), \(Y'\), \(Z'\) lần lượt là hình chiếu vuông góc của \(Q\) trên \(BC\), \(CA\), \(AB\). Khi đó
+            \begin{itemize}
+                \item Các tam giác \(XYZ\) và \(X'Y'Z'\) tương ứng được gọi là tam giác pedal của cặp điểm liên hợp đẳng giác \(P\) và \(Q\) ứng với tam giác \(ABC\);
+                \item Đường tròn \((I)\) đi qua 6 hình chiếu trên được gọi là đường tròn pedal của cặp điểm liên hợp đẳng giác $P$ và $Q$ ứng với tam giác \(ABC\).
+            \end{itemize}
+        \end{definition}
+
+        Ta có một số cặp điểm liên hợp đẳng giác quen thuộc trong tam giác:
+        \begin{itemize}
+            \item Trực tâm và tâm đường tròn ngoại tiếp. Đường tròn pedal của cặp điểm này là đường tròn Euler (đường tròn 9 điểm - nine-point circle).
+            \item Tâm đường tròn nội tiếp, các tâm đường tròn bàng tiếp của tam giác liên hợp đẳng giác với chính nó. Đường tròn pedal của các điểm này chính là đường tròn nội tiếp và các đường tròn bàng tiếp.
+            \item Đường đẳng giác với đường trung tuyến được gọi là đường đối trung. Điểm liên hợp đẳng giác của trọng tâm được gọi là điểm symmedian.
+        \end{itemize}
+
+        \begin{corollary}
+            (\textit{Điểm Bevan}) Cho tam giác \(ABC\). Gọi \(I_a\), \(I_b\), \(I_c\) là tâm các đường tròn bàng tiếp ứng với các góc \(A\), \(B\), \(C\) của tam giác \(ABC\). Gọi \(D\), \(E\), \(F\) lần lượt là tiếp điểm của đường tròn \((I_a)\) với \(BC\), đường tròn \((I_b)\) với \(CA\), đường tròn \((I_c)\) với \(AB\). Khi đó \(I_aD\), \(I_bE\), \(I_cF\) đồng quy tại điểm Bevan \(B_e\) của tam giác \(ABC\).
+        \end{corollary}
+
+    \subsection{Đường đối trung - Điểm symmedian}
+
+    \subsubsection*{Đường đối trung}
+
+        \begin{definition}
+            Đường đẳng giác với đường trung tuyến được gọi là đường đối trung.
+        \end{definition}
+
+        Bây giờ, ta hãy xét tam giác \(ABC\). Từ giờ, đường trung tuyến, đường đối trung ứng với đỉnh \(A\) trong tam giác \(ABC\) được viết tắt là đường \(A\)-trung tuyến và đường \(A\)-đối trung; tương tự với các đỉnh \(B\) và \(C\) trong tam giác.
+
+        \begin{property}
+            Quỹ tích các điểm có khoảng cách tới hai cạnh \(AB\), \(AC\) tỉ lệ thuận với độ dài của hai cạnh \(AB\), \(AC\) là đường \(A\)-đối trung.
+        \end{property}
+
+        \begin{proof}
+            Gọi \(P\) là một điểm bất kì trong tam giác \(ABC\). Gọi \(Q\) là điểm đối xứng với điểm \(P\) qua phân giác trong góc \(BAC\). Do tính đối xứng, ta có \(d(P,AB) = d(Q,AC)\) và \(d(P,AC) = d(Q,AB)\).\\
+            Các mệnh đề sau là tương đương:
+            \begin{multicols}{2}
+                \begin{enumerate}
+                    \item[\textit{i)}] \(AP\) là đường \(A\)-đối trung;
+                    \item[\textit{ii)}] \(AQ\) là đường \(A\)-trung tuyến;
+                    \item[\textit{iii)}] \(S[AQB] = S[AQC]\);
+                \end{enumerate}
+        
+                \columnbreak
+                
+                \begin{enumerate}
+                    \item[\textit{iv)}] \(\dfrac{1}{2} AB \cdot d(Q,AB) = \dfrac{1}{2} AC \cdot d(Q,AC)\);
+                    \item[\textit{v)}] \(AB \cdot d(P,AC) = AC \cdot d(P,AB)\);
+                    \item[\textit{vi)}] \(\dfrac{d(P,AB)}{d(P,AC)} = \dfrac{AB}{AC}\).
+                \end{enumerate}
+            \end{multicols}
+        \end{proof}
+
+        \begin{property}
+            Đường \(A\)-đối trung cắt \(BC\) tại điểm chia đoạn thẳng \(BC\) theo tỉ lệ bình phương độ dài hai cạnh \(AB\) và \(AC\).
+        \end{property}
+
+        \begin{proof}
+            Đây là hệ quả trực tiếp của định lí Steiner.
+        \end{proof}
+
+        \begin{property}
+            Đường \(A\)-đối trung đi qua đỉnh đối của một tứ giác điều hòa có ba đỉnh là \(A\), \(B\), \(C\). Hơn nữa, đường \(A\)-đối trung đi qua giao của hai tiếp tuyến tại \(B\) và \(C\) của đường tròn ngoại tiếp tam giác \(ABC\).
+        \end{property}
+
+        \begin{proof}
+            Gọi \(P\) là giao điểm của đường \(A\)-đối trung và đường tròn \((ABC)\); \(E\), \(F\) là hình chiếu của \(P\) trên các đường thẳng \(AB\), \(AC\).\\
+            Dễ thấy \(\triangle PEB \sim \triangle PFC\). Khi đó \(\dfrac{\overline{PB}}{\overline{PC}} = \dfrac{\overline{PE}}{\overline{PF}} = \dfrac{\overline{AB}}{\overline{AC}}\), hay tứ giác \(ABPC\) là tứ giác điều hòa.\\
+            Gọi \(S\) là giao của hai tiếp tuyến tại \(B\) và \(C\) của đường tròn ngoại tiếp tam giác \(ABC\). Gọi \(M\) là trung điểm của đoạn thẳng \(BC\), \(D\) là điểm đối xứng của \(A\) qua \(M\).\\
+            Ta có \(\angle SBC = \angle BAC = \angle BDC = 180 \degree - \angle DBA\). Do đó \(BS\) và \(BD\) là hai đường đẳng giác trong góc \(ABC\). Tương tự, \(CS\) và \(CD\) là hai đường đẳng giác trong góc \(ACB\). Suy ra \(S\) và \(D\) là cặp điểm liên hợp đẳng giác trong tam giác \(ABC\). Từ đó \(AS\) và \(AM\) là hai đường đẳng giác trong góc \(BAC\), hay \(AS\) là đường \(A\)-đối trung.
+        \end{proof}
+
+    \subsubsection*{Điểm symmedian}
+
+        \begin{theorem}
+            Giao điểm ba đường đối trung ứng với ba góc trong một tam giác đồng quy tại một điểm \(L_e\). 
+        \end{theorem}
+
+        \begin{proof}
+            Đây là hệ quả trực tiếp của định lí Ceva lượng giác.
+        \end{proof}
+
+        \begin{definition}
+            Điểm \(L_e\) được định nghĩa như trên được gọi là điểm symmedian (hoặc điểm Lemoine). Điểm này liên hợp đẳng giác với trọng tâm của tam giác.
+        \end{definition}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
+                \draw [line width=0.4pt] (0,6)-- (-2,0);
+                \draw [line width=0.4pt] (-2,0)-- (5,0);
+                \draw [line width=0.4pt] (5,0)-- (0,6);
+                \draw [line width=0.4pt] (0,6)-- (1.5,0);
+                \draw [line width=0.4pt] (-2,0)-- (2.5,3);
+                \draw [line width=0.4pt] (5,0)-- (-1,3);
+                \draw [line width=0.4pt] (0,6)-- (0.7722772277227721,0);
+                \draw [line width=0.4pt] (-2,0)-- (2.2471910112359557,3.303370786516853);
+                \draw [line width=0.4pt] (5,0)-- (-1.1090909090909093,2.672727272727272);
+                \begin{scriptsize}
+                    \draw [fill=black] (0,6) circle (0.6pt);
+                    \draw[color=black] (-0.01914786643566408,6.242095001438777) node {$A$};
+                    \draw [fill=black] (-2,0) circle (0.6pt);
+                    \draw[color=black] (-2.0905793680233824,-0.06007841551293844) node {$B$};
+                    \draw [fill=black] (5,0) circle (0.6pt);
+                    \draw[color=black] (5.052720779876083,-0.06007841551293844) node {$C$};
+                    \draw [fill=black] (1.5,0) circle (0.6pt);
+                    \draw [fill=black] (2.5,3) circle (0.6pt);
+                    \draw [fill=black] (-1,3) circle (0.6pt);
+                    \draw [fill=black] (1,2) circle (0.6pt);
+                    \draw[color=black] (1.0981697313904386+0.3,2.1996650407645686-0.2) node {$G$};
+                    \draw [fill=black] (0.52,1.96) circle (0.6pt);
+                    \draw[color=black] (0.6587751704475893-0.4,2.187110910451916-0.3) node {$L_e$};
+                    \draw [fill=black] (0.7722772277227721,0) circle (0.6pt);
+                    \draw [fill=black] (2.2471910112359557,3.303370786516853) circle (0.6pt);
+                    \draw [fill=black] (-1.1090909090909093,2.672727272727272) circle (0.6pt);
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{property}
+            Điểm symmedian của tam giác \(ABC\) là trọng tâm của tam giác pedal nó tạo thành ứng với tam giác \(ABC\).
+        \end{property}
+
+        \begin{proof}
+            Gọi \(X\), \(Y\), \(Z\) lần lượt là hình chiếu vuông góc của \(L_e\) trên \(BC\), \(CA\), \(AB\).\\
+            Áp dụng định lí sine
+            \[\frac{LZ}{LY} = \frac{AB}{AC} = \frac{\sin \angle ACB}{\sin \angle ABC} = \frac{XY}{XZ} = \frac{\sin \angle XLY}{\sin \angle XLZ}.\]
+            Suy ra \(S[LXZ] = \dfrac{1}{2} LX \cdot LZ \cdot \sin \angle XLZ = \dfrac{1}{2} LX \cdot LY \cdot \sin \angle XLY = S[LXY]\). Tương tự, ta thu được \(S[LXY] = S[LYZ] = S[LZX]\). Vì vậy, \(L\) là trọng tâm của tam giác \(XYZ\).
+        \end{proof}
+
+        \begin{property}
+            (\textit{Đường tròn Lemoine thứ nhất}) Đường thẳng song song \(BC\) đi qua điểm symmedian \(L_e\) cắt \(CA\) tại \(A_1\) và cắt \(AB\) tại \(A_2\). Các điểm \(B_1\), \(B_2\), \(C_1\), \(C_2\) được định nghĩa tương tự theo hoán vị vòng quanh. Khi đó, sáu điểm \(A_1\), \(A_2\), \(B_1\), \(B_2\), \(C_1\), \(C_2\) đồng viên.
+        \end{property}
+
+        \begin{proof}
+            Gọi \(K\), \(L\) là hình chiếu vuông góc của \(L_e\) lên \(AB\), \(AC\).\\
+            Ta có tứ giác \(AB_1L_eC_2\) là hình bình hành, biến đổi góc ta được \(\triangle KL_eB_1 \sim \triangle LL_eC_2\). Khi đó kết hợp với Tính chất 4.2 ta được \(\dfrac{AC_2}{AB_1} = \dfrac{L_eB_1}{L_eC_2} = \dfrac{L_eK}{L_eL} = \dfrac{AA_2}{AA_1}\). Suy ra \(A_1\), \(A_2\), \(B_1\), \(C_2\) đồng viên.\\
+            Tương tự, \(B_1\), \(B_2\), \(C_1\), \(A_2\) đồng viên. Khi đó \(\angle AB_1C_2 = \angle AA_1A_2 = \angle ACB = \angle BB_2B_1 = \angle BA_2C_1\), hay tứ giác \(C_1A_2B_1C_2\) là hình thang cân. Vì vậy, sáu điểm \(A_1\), \(A_2\), \(B_1\), \(B_2\), \(C_1\), \(C_2\) đồng viên.
+        \end{proof}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+                \draw [line width=0.4pt] (0,6)-- (-2,0);
+                \draw [line width=0.4pt] (-2,0)-- (5,0);
+                \draw [line width=0.4pt] (5,0)-- (0,6);
+                \draw [line width=0.4pt] (3.3666666666666676,1.96)-- (-1.3466666666666667,1.96);
+                \draw [line width=0.4pt] (-0.8133333333333335,3.56)-- (2.153333333333333,0);
+                \draw [line width=0.4pt] (-0.13333333333333325,0)-- (1.3333333333333333,4.4);
+                \draw [line width=0.4pt,dash pattern=on 3pt off 3pt] (1.01,2.063333333333333) circle (2.3589310196687725cm);
+                \draw [line width=0.4pt] (0.52,1.96)-- (-1.16,2.52);
+                \draw [line width=0.4pt] (0.52,1.96)-- (2.2,3.36);
+                \begin{scriptsize}
+                    \draw [fill=black] (0,6) circle (0.6pt);
+                    \draw[color=black] (-0.023025929012583816,6.2883173297159445) node {$A$};
+                    \draw [fill=black] (-2,0) circle (0.6pt);
+                    \draw[color=black] (-2.1520388599153826,-0.08393665097226322) node {$B$};
+                    \draw [fill=black] (5,0) circle (0.6pt);
+                    \draw[color=black] (5.092519029962197,-0.06915183895210497) node {$C$};
+                    \draw [fill=black] (0.52,1.96) circle (0.6pt);
+                    \draw[color=black] (0.6127209878542241,1.793734475587835-0.2) node {$L_e$};
+                    \draw [fill=black] (3.3666666666666676,1.96) circle (0.6pt);
+                    \draw[color=black] (3.525328955825415,2.237278836192583) node {$A_1$};
+                    \draw [fill=black] (-1.3466666666666667,1.96) circle (0.6pt);
+                    \draw[color=black] (-1.619785627189683,2.192924400132108) node {$A_2$};
+                    \draw [fill=black] (-0.8133333333333335,3.56) circle (0.6pt);
+                    \draw[color=black] (-1.0136083343631916,3.9079625944704657) node {$B_1$};
+                    \draw [fill=black] (2.153333333333333,0) circle (0.6pt);
+                    \draw[color=black] (2.179911061991007,-0.069151838952105-0.2) node {$B_2$};
+                    \draw [fill=black] (-0.13333333333333325,0) circle (0.6pt);
+                    \draw[color=black] (-0.14130442517385045,-0.0543670269319467-0.2) node {$C_1$};
+                    \draw [fill=black] (1.3333333333333333,4.4) circle (0.6pt);
+                    \draw[color=black] (1.4998097090637237,4.676772819518694) node {$C_2$};
+                    \draw [fill=black] (-1.16,2.52) circle (0.6pt);
+                    \draw[color=black] (-1.338874198806675,2.7251776328578052) node {$K$};
+                    \draw [fill=black] (2.2,3.36) circle (0.6pt);
+                    \draw[color=black] (2.312974370172432,3.5826967300269836) node {$L$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{property}
+            (\textit{Đường tròn Lemoine thứ hai}) Đường thẳng đối song \(BC\) đi qua điểm symmedian \(L_e\) cắt \(CA\) tại \(A_1\) và cắt \(AB\) tại \(A_2\). Các điểm \(B_1\), \(B_2\), \(C_1\), \(C_2\) được định nghĩa tương tự theo hoán vị vòng quanh. Khi đó, sáu điểm \(A_1\), \(A_2\), \(B_1\), \(B_2\), \(C_1\), \(C_2\) đồng viên. Đặc biệt, sáu điểm thuộc đường tròn có tâm là điểm symmedian.
+        \end{property}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+                \draw [line width=0.4pt] (0,6)-- (-2,0);
+                \draw [line width=0.4pt] (-2,0)-- (5,0);
+                \draw [line width=0.4pt] (5,0)-- (0,6);
+                \draw [line width=0.4pt,dash pattern=on 3pt off 3pt] (0.52,1.96) circle (2.3051632865759806cm);
+                \draw [line width=0.4pt] (2.666666666666667,2.8)-- (-1.6266666666666663,1.12);
+                \draw [line width=0.4pt] (-0.6933333333333331,3.92)-- (1.7333333333333327,0);
+                \draw [line width=0.4pt] (-0.6933333333333319,0)-- (1.7333333333333327,3.92);
+                \begin{scriptsize}
+                    \draw [fill=black] (0,6) circle (0.6pt);
+                    \draw[color=black] (-0.027298628740153874,6.335776344433451) node {$A$};
+                    \draw [fill=black] (-2,0) circle (0.6pt);
+                    \draw[color=black] (-2.182108167516542,-0.09361471841962846) node {$B$};
+                    \draw [fill=black] (5,0) circle (0.6pt);
+                    \draw[color=black] (5.105702955499534,-0.07609594168160919) node {$C$};
+                    \draw [fill=black] (0.52,1.96) circle (0.6pt);
+                    \draw[color=black] (0.5683397803525061,1.7808943925484355-0.2) node {$L_e$};
+                    \draw [fill=black] (-0.6933333333333331,3.92) circle (0.6pt);
+                    \draw[color=black] (-0.885718688903105,4.391192126513309) node {$B_1$};
+                    \draw [fill=black] (1.7333333333333327,0) circle (0.6pt);
+                    \draw[color=black] (1.8647292589659428,-0.023539611467551347-0.2) node {$B_2$};
+                    \draw [fill=black] (-0.6933333333333319,0) circle (0.6pt);
+                    \draw[color=black] (-0.798124805213008,-0.023539611467551347-0.2) node {$C_1$};
+                    \draw [fill=black] (1.7333333333333327,3.92) circle (0.6pt);
+                    \draw[color=black] (1.917285589180001,4.251041912609155) node {$C_2$};
+                    \draw [fill=black] (2.666666666666667,2.8) circle (0.6pt);
+                    \draw[color=black] (2.8632995330330493,3.129840201375921) node {$A_1$};
+                    \draw [fill=black] (-1.6266666666666663,1.12) circle (0.6pt);
+                    \draw[color=black] (-1.9368452931842697,1.3078874206219147) node {$A_2$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Theo tính chất của đường đối song, \(AL\) là đường \(A\)-trung tuyến trong tam giác \(AA_1A_2\), hay \(L_eA_1 = L_eA_2\). Tương tự, \(L_eB_1 = L_eB_2\) và \(L_eC_1 = L_eC_2\).\\
+            Mặt khác, ta có \(\angle L_eC_1B_2 = \angle BAC = \angle L_eB_2C_1\) nên \(L_eB_2 = L_eC_1\). Từ đó sáu điểm \(A_1\), \(A_2\), \(B_1\), \(B_2\), \(C_1\), \(C_2\) cách đều điểm \(L_e\).
+        \end{proof}
+
+    \section{Đường thẳng Simson - Đường thẳng Steiner}
+
+        Về mặt bản chất, phần này bắt nguồn từ định lí nổi tiếng sau đây:
+
+        \begin{theorem}
+            Cho tam giác \(ABC\) và một điểm \(P\) bất kì trên mặt phẳng. Khi đó, hình chiếu vuông góc của \(P\) trên các cạnh của tam giác \(ABC\) thẳng hàng khi và chỉ khi \(P\) thuộc đường tròn ngoại tiếp tam giác \(ABC\).
+        \end{theorem}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
+                \draw [line width=0.4pt] (0,6)-- (-2,0);
+                \draw [line width=0.4pt] (-2,0)-- (5,0);
+                \draw [line width=0.4pt] (5,0)-- (0,6);
+                \draw [line width=0.4pt] (1.5,2.1666666666666665) circle (4.1163630117428225cm);
+                \draw [line width=0.4pt] (0.47574912995088803,0)-- (4.040994495907222,1.150806604911333);
+                \draw [line width=0.4pt] (0.47574912995088803,0)-- (-2.298494447020595,-0.8954833410617848);
+                \draw [line width=0.4pt] (0.47574912995088803,-1.820231200052279)-- (0.47574912995088803,0);
+                \draw [line width=0.4pt] (0.47574912995088803,-1.820231200052279)-- (4.040994495907222,1.150806604911333);
+                \draw [line width=0.4pt] (0.47574912995088803,-1.820231200052279)-- (-2.298494447020595,-0.8954833410617848);
+                \draw [line width=0.4pt] (-2,0)-- (-2.298494447020595,-0.8954833410617848);
+                \draw [line width=0.4pt] (0.47574912995088803,-1.820231200052279)-- (-2,0);
+                \draw [line width=0.4pt] (0.47574912995088803,-1.820231200052279)-- (5,0);
+                \begin{scriptsize}
+                    \draw [fill=black] (0,6) circle (0.6pt);
+                    \draw[color=black] (-0.02772085961593551,6.2910042116005505) node {$A$};
+                    \draw [fill=black] (-2,0) circle (0.6pt);
+                    \draw[color=black] (-2.24525299764923,-0.025602484615479232) node {$B$};
+                    \draw [fill=black] (5,0) circle (0.6pt);
+                    \draw[color=black] (5.0793228522183185+0.1,-0.1263993999806286) node {$C$};
+                    \draw [fill=black] (0.47574912995088803,-1.820231200052279) circle (0.6pt);
+                    \draw[color=black] (0.4258652595272384,-1.974342848341701) node {$P$};
+                    \draw [fill=black] (0.47574912995088803,0) circle (0.6pt);
+                    \draw[color=black] (0.3586673159504719,0.4615826063160762) node {$A_1$};
+                    \draw [fill=black] (4.040994495907222,1.150806604911333) circle (0.6pt);
+                    \draw[color=black] (4.138551642143588,1.5871481612269112) node {$B_1$};
+                    \draw [fill=black] (-2.298494447020595,-0.8954833410617848) circle (0.6pt);
+                    \draw[color=black] (-2.4972452860621046,-0.8655767793250577) node {$C_1$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Không mất tính tổng quát, giả sử \(P\) nằm trong góc \(BAC\). Gọi \(A_1\), \(B_1\), \(C_1\) lần lượt là hình chiếu vuông góc của \(P\) lên \(BC\), \(CA\), \(AB\).\\
+            Do \(\angle PA_1B = \angle PC_1B = 90 \degree\) nên \(P\), \(A_1\), \(B\), \(C_1\) đồng viên. Tương tự, \(P\), \(A_1\), \(C\), \(B_1\) đồng viên. Khi đó \(\angle BA_1C_1 = \angle BPC_1\) và \(\angle CA_1B_1 = \angle CPB_1\).\\
+            Ta có \(A_1\), \(B_1\), \(C_1\) thẳng hàng khi và chỉ khi \(\angle BA_1C_1 = \angle CA_1B_1\), hay \(\angle BPC_1 = \angle CPB_1\), tương đương \(\angle BPC = \angle B_1PC_1 = 180 \degree - \angle BAC\). Điều này xảy ra khi và chỉ khi \(P\) thuộc đường tròn \((ABC)\).
+        \end{proof}
+
+        \begin{remark}
+            Tam giác \(P\)-pedal của tam giác \(ABC\) suy biến thành một đường thẳng.
+        \end{remark}
+
+        \begin{definition}
+            Đường thẳng đi qua ba hình chiếu vuông góc của \(P\) lên các cạnh tam giác \(ABC\) được gọi là đường thẳng Simson của điểm \(P\) ứng với tam giác \(ABC\).
+        \end{definition}
+
+        \begin{theorem}
+            Cho tam giác \(ABC\) và một điểm \(P\) bất kì nằm trên đường tròn ngoại tiếp tam giác \(ABC\). Khi đó, các điểm đối xứng với \(P\) qua ba cạnh của tam giác \(ABC\) cùng nằm trên một đường thẳng, đồng thời đường thẳng ấy đi qua trực tâm của tam giác \(ABC\).
+        \end{theorem}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
+                \draw [line width=0.4pt] (0,6)-- (-2,0);
+                \draw [line width=0.4pt] (-2,0)-- (5,0);
+                \draw [line width=0.4pt] (5,0)-- (0,6);
+                \draw [line width=0.4pt] (1.5,2.1666666666666665) circle (4.1163630117428225cm);
+                \draw [line width=0.4pt] (0.8420190348829251,0)-- (4.22874641622833,0.9255043005260039);
+                \draw [line width=0.4pt] (0.8420190348829251,0)-- (-2.2848286516902574,-0.8544859550707731);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (0.8420190348829251,0);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (4.22874641622833,0.9255043005260039);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (-2.2848286516902574,-0.8544859550707731);
+                \draw [line width=0.4pt] (-2,0)-- (-2.2848286516902574,-0.8544859550707731);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (-2,0);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (5,0);
+                \draw [line width=0.4pt] (-2.2848286516902574,-0.8544859550707731)-- (-5.41167633826344,0.18779660712028878);
+                \draw [line width=0.4pt] (0.8420190348829251,0)-- (0.842019034882925,1.8967685172618336);
+                \draw [line width=0.4pt] (4.22874641622833,0.9255043005260039)-- (7.615473797573735,3.7477771183138424);
+                \draw [line width=0.4pt] (0.842019034882925,1.8967685172618336)-- (7.615473797573735,3.7477771183138424);
+                \draw [line width=0.4pt] (0.842019034882925,1.8967685172618336)-- (-5.41167633826344,0.18779660712028878);
+                \draw [line width=0.4pt] (-2,0)-- (4.2622950819672125,5.218579234972677);
+                \draw [line width=0.4pt] (5,0)-- (-2.6,2.533333333333333);
+                \draw [line width=0.4pt] (7.615473797573735,3.7477771183138424)-- (4.2622950819672125,5.218579234972677);
+                \draw [line width=0.4pt] (-5.41167633826344,0.18779660712028878)-- (-2.6,2.533333333333333);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (0,1.6666666666666667);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (4.2622950819672125,5.218579234972677);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (-2.6,2.533333333333333);
+                \begin{scriptsize}
+                    \draw [fill=black] (0,6) circle (0.6pt);
+                    \draw[color=black] (-0.04948650675327619,6.373903049363097) node {$A$};
+                    \draw [fill=black] (-2,0) circle (0.6pt);
+                    \draw[color=black] (-2.3291331682742795,-0.03893475547634773) node {$B$};
+                    \draw [fill=black] (5,0) circle (0.6pt);
+                    \draw[color=black] (5.170265194860237,-0.16676540939341306) node {$C$};
+                    \draw [fill=black] (0.842019034882925,-1.8967685172618336) circle (0.6pt);
+                    \draw[color=black] (0.7814127437076503,-2.1055303271355705) node {$P$};
+                    \draw [fill=black] (0.8420190348829251,0) circle (0.6pt);
+                    \draw[color=black] (0.5470565448596968,0.5363031871504463) node {$A_1$};
+                    \draw [fill=black] (4.22874641622833,0.9255043005260039) circle (0.6pt);
+                    \draw[color=black] (4.211535290482245,1.4950330915284362) node {$B_1$};
+                    \draw [fill=black] (-2.2848286516902574,-0.8544859550707731) circle (0.6pt);
+                    \draw[color=black] (-2.5421842581360563,-0.8272237879649174-0.2) node {$C_1$};
+                    \draw [fill=black] (0.842019034882925,1.8967685172618336) circle (0.6pt);
+                    \draw[color=black] (1.0796842695141369,1.8572199442934547-0.1) node {$A_2$};
+                    \draw [fill=black] (7.615473797573735,3.7477771183138424) circle (0.6pt);
+                    \draw[color=black] (7.769488491173904,3.6042388811600143) node {$B_2$};
+                    \draw [fill=black] (-5.41167633826344,0.18779660712028878) circle (0.6pt);
+                    \draw[color=black] (-5.631425061131809,0.216726552357783-0.2) node {$C_2$};
+                    \draw [fill=black] (0,1.6666666666666667) circle (0.6pt);
+                    \draw[color=black] (-0.1347069426979866,2.155491470099941) node {$H$};
+                    \draw [fill=black] (4.2622950819672125,5.218579234972677) circle (0.6pt);
+                    \draw[color=black] (4.488501707302554,5.670834452819237) node {$B_3$};
+                    \draw [fill=black] (-2.6,2.533333333333333) circle (0.6pt);
+                    \draw[color=black] (-2.968286437859608,3.007695829547043) node {$C_3$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Không mất tính tổng quát, giả sử \(P\) nằm trên cung nhỏ \(BC\) của đường tròn \((ABC)\). Gọi \(H\) là trực tâm của tam giác \(ABC\)); \(A_2\), \(B_2\), \(C_2\) lần lượt là điểm đối xứng với \(P\) qua \(BC\), \(CA\), \(AB\); \(B_3\), \(C_3\) lần lượt là giao điểm khác \(B\), \(C\) của \(BH\), \(CH\) với đường tròn \((ABC)\).\\
+            Không khó để chỉ ra rằng \(H\) và \(B_3\) đối xứng nhau qua \(CA\). Lại có \(P\) và \(B_2\) đối xứng nhau qua \(CA\) nên tứ giác \(PB_2B_3H\) là hình thang cân. Tương tự, tứ giác \(PC_2C_3H\) cũng là hình thang cân.\\
+            Khi đó, \(\angle B_2HC_2 = \angle B_2HB_3 + \angle C_2HC_3 + \angle B_3HC_3 = \angle PB_2H + \angle PC_2H + \angle BHC = \angle PB_2H + \angle PC_2H + \angle B_2PC_2 = 180 \degree\), suy ra \(B_2\), \(H\), \(C_2\) thẳng hàng.\\
+            Tương tự, \(C_2\), \(H\), \(A_2\) thẳng hàng. Vì vậy, bốn điểm \(A_2\), \(B_2\), \(C_2\), \(H\) thẳng hàng.
+        \end{proof}
+
+        \begin{remark}
+            Dựa theo định lí về đường thẳng Simson, phần đảo cho định lí trên vẫn đúng:\\
+            "Cho tam giác \(ABC\) và điểm \(P\) bất kì nằm trên mặt phẳng. Khi đó, nếu các điểm đối xứng với \(P\) qua ba cạnh của tam giác \(ABC\) cùng nằm trên một đường thẳng thì điểm \(P\) thuộc đường tròn ngoại tiếp tam giác \(ABC\)."
+        \end{remark}
+
+        \begin{proof}
+            Không mất tính tổng quát, giả sử \(P\) nằm trong góc \(BAC\). Gọi \(A_1\), \(B_1\), \(C_1\) lần lượt là hình chiếu vuông góc của \(P\) lên \(BC\), \(CA\), \(AB\).\\
+            Xét phép vị tự tâm \(P\), tỉ số \(\dfrac{1}{2}\)
+            \[\mathcal{H}_P^{\frac{1}{2}}: A_2 \mapsto A_1, B_2 \mapsto B_1, C_2 \mapsto C_1, A_2B_2 \mapsto A_1B_1.\]
+            Mà \(A_2\), \(B_2\), \(C_2\) thẳng hàng nên \(A_1\), \(B_1\), \(C_1\) thẳng hàng. Theo định lí về đường thẳng Simson, điều này xảy ra khi và chỉ khi \(P\) thuộc đường tròn \((ABC)\).
+        \end{proof}
+
+        \begin{remark}
+            Phép vị tự trên còn cho ta một tính chất quan trọng: đường thẳng Simson của điểm \(P\) ứng với tam giác \(ABC\) đi qua trung điểm của đoạn thẳng \(PH\).
+        \end{remark}
+
+        \begin{property}
+            Cho tam giác \(ABC\) và một điểm \(P\) bất kì nằm trên đường tròn ngoại tiếp tam giác \(ABC\). Gọi \(H\) là trực tâm của tam giác \(ABC\). Khi đó, đường thẳng Simson của điểm \(P\) đi qua trung điểm của đoạn thẳng \(PH\).
+        \end{property}
+
+        \begin{definition}
+            Đường thẳng đi qua trực tâm và ba điểm đối xứng của \(P\) qua các cạnh tam giác \(ABC\) được gọi là đường thẳng Steiner của điểm \(P\) ứng với tam giác \(ABC\).
+        \end{definition}
+
+        Liên quan đến định lí Steiner, chúng ta có một định lí quan trọng khác:
+
+        \begin{theorem}
+            (\textit{Định lí Collings}) Cho tam giác \(ABC\) và trực tâm \(H\) của tam giác. Kẻ đường thẳng \(\ell\) bất kì đi qua điểm \(H\). Khi đó, các đường thẳng đối xứng với \(H\) qua \(BC\), \(CA\), \(AB\) đồng quy tại một điểm nằm trên đường tròn ngoại tiếp tam giác \(ABC\).
+        \end{theorem}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
+                \draw [line width=0.4pt] (0,6)-- (-2,0);
+                \draw [line width=0.4pt] (-2,0)-- (5,0);
+                \draw [line width=0.4pt] (5,0)-- (0,6);
+                \draw [line width=0.4pt] (1.5,2.1666666666666665) circle (4.1163630117428225cm);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (-2,0);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (5,0);
+                \draw [line width=0.4pt] (-2,0)-- (4.2622950819672125,5.218579234972677);
+                \draw [line width=0.4pt] (5,0)-- (-2.6,2.533333333333333);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (4.2622950819672125,5.218579234972677);
+                \draw [line width=0.4pt] (0.842019034882925,-1.8967685172618336)-- (-2.6,2.533333333333333);
+                \draw [line width=0.4pt] (-6.0988864474942375,0)-- (2.941295061156268,2.4704459266124776);
+                \draw [line width=0.4pt] (0,6)-- (0,-1.6666666666666705);
+                \draw [line width=0.4pt] (-6.0988864474942375,0)-- (-2,0);
+                \draw [line width=0.4pt] (-6.0988864474942375,0)-- (0.842019034882925,-1.8967685172618336);
+                \begin{scriptsize}
+                    \draw [fill=black] (0,6) circle (0.6pt);
+                    \draw[color=black] (-0.03726164652900947,6.344566761530521) node {$A$};
+                    \draw [fill=black] (-2,0) circle (0.6pt);
+                    \draw[color=black] (-2.232248452964711,-0.12486803638520855) node {$B$};
+                    \draw [fill=black] (5,0) circle (0.6pt);
+                    \draw[color=black] (5.161391316081862,-0.14412230661710063) node {$C$};
+                    \draw [fill=black] (0.842019034882925,-1.8967685172618336) circle (0.6pt);
+                    \draw[color=black] (0.7906719734423515,-2.0888036000381978) node {$P$};
+                    \draw [fill=black] (0,1.6666666666666667) circle (0.6pt);
+                    \draw[color=black] (-0.2298043488479306,2.1856443914418375) node {$H$};
+                    \draw [fill=black] (4.2622950819672125,5.218579234972677) circle (0.6pt);
+                    \draw[color=black] (4.4682375877337455,5.632158762950515) node {$H_b$};
+                    \draw [fill=black] (-2.6,2.533333333333333) circle (0.6pt);
+                    \draw[color=black] (-2.925402181312827,2.9750694709494114) node {$H_c$};
+                    \draw [fill=black] (0,-1.6666666666666705) circle (0.6pt);
+                    \draw[color=black] (-0.21055007861603853,-1.7422267358641408-0.1) node {$H_a$};
+                    \draw [fill=black] (-6.0988864474942375,0) circle (0.6pt);
+                    \draw[color=black] (-6.102356769575026-0.1,-0.16337657684899265) node {$A'$};
+                    \draw [fill=black] (2.941295061156268,2.4704459266124776) circle (0.6pt);
+                    \draw[color=black] (3.2552185631245427,2.6477468770072465) node {$B'$};
+                    \draw [fill=black] (-1.589207431075722,1.2323777067728339) circle (0.6pt);
+                    \draw[color=black] (-1.2887892116019972+0.1,1.588762014253184) node {$C'$};
+                    \draw[color=black] (-2.906147911080935,0.7415741240499337-0.1) node {$\ell$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Gọi \(A'\), \(B'\), \(C'\) lần lượt là giao điểm của \(\ell\) với \(BC\), \(CA\), \(AB\); \(H_a\), \(H_b\), \(H_c\) lần lượt là giao điểm của \(AH\), \(BH\), \(CH\) với đường tròn \((ABC)\); \(P\) là giao điểm của \(H_bB'\) và \(H_cC'\).\\
+            Chú ý rằng \(H\) đối xứng với \(H_b\), \(H_c\) qua \(CA\), \(AB\). Khi đó, các đường thẳng \(H_bB'\) và \(H_cC'\) tương ứng đối xứng với \(\ell\) qua \(CA\), \(AB\).\\
+            Như vậy, ta chỉ cần chỉ ra rằng \(P\) thuộc đường tròn \((ABC)\), mà \(H_b\) và \(H_c\) thuộc đường tròn \((ABC)\) nên ta chỉ ra bốn điểm \(C\), \(H_b\), \(H_c\), \(P\) đồng viên. Thật vậy, ta có \((H_bC,H_bP) \equiv (HB',HC) \pmod{\pi}\) và \((H_cC,H_cP) \equiv (HH_c,HC') \equiv (HB',HC) \pmod{\pi}\). Suy ra \((H_bC,H_bP) \equiv (H_cC,H_cP) \pmod{\pi}\), hay bốn điểm \(C\), \(H_b\), \(H_c\), \(P\) đồng viên.\\
+            Chứng minh tương tự cho giao điểm của \(H_cC'\) và \(H_aA'\), \(H_aA'\) và \(H_bB'\), ta được điều phải chứng minh.
+        \end{proof}
+
+        \begin{definition}
+            Điểm đồng quy \(P\) của ba đường thẳng đối xứng với đường thẳng \(\ell\) bất kì đi qua trực \(H\) qua ba cạnh của tam giác được gọi là điểm Anti-Steiner của đường thẳng \(\ell\) ứng với tam giác \(ABC\).
+        \end{definition}
+
+        \begin{corollary}
+            Đối xứng của đường thẳng Euler qua ba cạnh của tam giác ứng với nó đồng quy. Điểm đồng quy được gọi là điểm Euler reflection.
+        \end{corollary}
+
+        Ngoài ra, ta còn có thể phát biểu lại bài toán đảo của định lí về đường thẳng Steiner như một hệ quả của định lí Collings.
+
+        \begin{corollary}
+            Cho tam giác \(ABC\) có trực tâm \(H\) và điểm \(P\) bất kì nằm trên mặt phẳng. Gọi các điểm đối xứng với \(P\) qua \(BC\), \(CA\), \(AB\) lần lượt là \(A'\), \(B'\), \(C'\). Khi đó, nếu ba trong bốn điểm \(H\), \(A'\), \(B'\), \(C'\) thẳng hàng thì \(P\) thuộc đường tròn ngoại tiếp tam giác \(ABC\).
+        \end{corollary}
+
+        \begin{property}
+            Đường thẳng qua \(P\) vuông góc với \(BC\) cắt đường tròn \((O)\) tại điểm thứ hai là \(A'\). Khi đó \(AA'\) song song với đường thẳng Simson của \(P\) ứng với tam giác \(ABC\).
+        \end{property}
+
+        \begin{proof}
+            Do tứ giác \(PA_1B_1C\) nội tiếp nên \(\angle A'A_1B_1 = \angle ACP = \angle AA'P\), suy ra \(AA' \parallel A_1B_1\).
+        \end{proof}
+
+        \begin{property}
+            Gọi \(P\) và \(Q\) là hai điểm thuộc đường tròn ngoại tiếp tam giác \(ABC\). Khi đó, góc tạo bởi hai đường thẳng Simson của \(P\) và \(Q\) ứng với tam giác \(ABC\) bằng một nửa số đo cung nhỏ \(PQ\) của đường tròn \((ABC)\).
+        \end{property}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.55]
+                \draw [line width=0.4pt] (0,6)-- (-2,0);
+                \draw [line width=0.4pt] (-2,0)-- (5,0);
+                \draw [line width=0.4pt] (5,0)-- (0,6);
+                \draw [line width=0.4pt] (1.5,2.1666666666666665) circle (4.1163630117428225cm);
+                \draw [line width=0.4pt] (-2.5853327881513195,2.671147047355754)-- (-2.5853327881513195,0);
+                \draw [line width=0.4pt] (-2.5853327881513195,2.671147047355754)-- (0.5775781782876133,5.3069061860548645);
+                \draw [line width=0.4pt] (-2.5853327881513195,2.671147047355754)-- (-1.257189164608406,2.2284325061747827);
+                \draw [line width=0.4pt] (-2.5853327881513195,2.671147047355754)-- (-2,0);
+                \draw [line width=0.4pt] (-2.5853327881513195,0)-- (-2,0);
+                \draw [line width=0.4pt] (5,0)-- (5.553950792204094,0);
+                \draw [line width=0.4pt] (5.553950792204093,2.8807586907309624)-- (5.553950792204094,0);
+                \draw [line width=0.4pt] (5.553950792204093,2.8807586907309624)-- (3.8102624439864496,1.42768506721626);
+                \draw [line width=0.4pt] (5.553950792204093,2.8807586907309624)-- (-0.380377313560302,4.858868059319095);
+                \draw [line width=0.4pt] (0,6)-- (-2.5853327881513195,1.6621862859775802);
+                \draw [line width=0.4pt,dash pattern=on 3pt off 3pt] (-2.392288739763665,6.506166960345979)-- (6.838027854187263,-1.0513677220027369);
+                \draw [line width=0.4pt,dash pattern=on 3pt off 3pt] (1.8745194332772865,7.482985640103999)-- (-3.36104611836494,-1.301534540300616);
+                \draw [line width=0.4pt] (0,6)-- (5.553950792204093,1.4525746426023707);
+                \begin{scriptsize}
+                    \draw [fill=black] (0,6) circle (0.6pt);
+                    \draw[color=black] (-0.04525175713347751,6.316185419695955) node {$A$};
+                    \draw [fill=black] (-2,0) circle (0.6pt);
+                    \draw[color=black] (-2.1462813688634657,-0.15424205713616915) node {$B$};
+                    \draw [fill=black] (5,0) circle (0.6pt);
+                    \draw[color=black] (5.0864665865610075,-0.13564887473147916) node {$C$};
+                    \draw [fill=black] (-2.5853327881513195,2.671147047355754) circle (0.6pt);
+                    \draw[color=black] (-2.8156359354323115,2.7834807628048526) node {$P$};
+                    \draw [fill=black] (-2.5853327881513195,0) circle (0.6pt);
+                    \draw[color=black] (-2.9086018474557624,0.291994320576391) node {$A_1$};
+                    \draw [fill=black] (0.5775781782876133,5.3069061860548645) circle (0.6pt);
+                    \draw[color=black] (0.9030005455057208,5.498085393889594) node {$B_1$};
+                    \draw [fill=black] (-1.257189164608406,2.2284325061747827) circle (0.6pt);
+                    \draw[color=black] (-1.105063154200817,2.076939831426632) node {$C_1$};
+                    \draw [fill=black] (5.553950792204093,2.8807586907309624) circle (0.6pt);
+                    \draw[color=black] (5.700041605915783,3.1739375933033425) node {$Q$};
+                    \draw [fill=black] (5.553950792204094,0) circle (0.6pt);
+                    \draw[color=black] (5.848787065153304,0.291994320576391) node {$A_2$};
+                    \draw [fill=black] (3.8102624439864496,1.42768506721626) circle (0.6pt);
+                    \draw[color=black] (3.5990119941857945,1.4261784472624817) node {$B_2$};
+                    \draw [fill=black] (-0.380377313560302,4.858868059319095) circle (0.6pt);
+                    \draw[color=black] (-0.7517926885117037,4.9216967393442035) node {$C_2$};
+                    \draw [fill=black] (-2.5853327881513195,1.6621862859775802) circle (0.6pt);
+                    \draw[color=black] (-2.741263205813551,1.760855730546902) node {$P'$};
+                    \draw [fill=black] (5.553950792204093,1.4525746426023707) circle (0.6pt);
+                    \draw[color=black] (5.8116007003439245,1.5935170889046917) node {$Q'$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Các đường thẳng qua \(P\) và \(Q\) vuông góc \(BC\) cắt \((ABC)\) tại \(P'\) và \(Q'\). Gọi \(\ell_1\), \(\ell_2\) lần lượt là đường thẳng Simson của \(P\),\(Q\) ứng với tam giác \(ABC\).\\
+            Theo Tính chất 5.2, \(AP' \parallel \ell_1\) và \(AQ' \parallel \ell_2\). Do đó \(\angle (\ell_1,\ell_2) = \angle P'AQ'\).\\
+            Do \(PP' \parallel QQ'\) mà bốn điểm \(P\), \(P'\), \(Q\), \(Q'\) đồng viên nên tứ giác \(PQQ'P'\) là hình thang cân và số đo cung nhỏ \(P'Q'\) bằng số đo cung nhỏ \(PQ\) của đường tròn \((ABC)\). Do đó \(\angle P'AQ' = \dfrac{1}{2} \angle POQ\), trong đó \(O\) là tâm đường tròn ngoại tiếp tam giác \(ABC\).
+        \end{proof}
+
+        \begin{property}
+            Cho tứ giác \(ABCD\) nội tiếp đường tròn \((O)\). Khi đó các đường thẳng Simson của \(A\), \(B\), \(C\), \(D\) ứng với tam giác \(BCD\), \(CDA\), \(DAB\), \(ABC\) đồng quy.
+        \end{property}
+
+        \begin{center}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.8]
+                \draw [line width=0.4pt] (0,0) circle (3cm);
+                \draw [line width=0.4pt] (-2.1213203435596424,2.121320343559643)-- (0.6779199278637946,2.922400481009601);
+                \draw [line width=0.4pt] (0.6779199278637946,2.922400481009601)-- (2.8523968481158435,-0.9294257478996376);
+                \draw [line width=0.4pt] (2.8523968481158435,-0.9294257478996376)-- (-2.8283203055059865,-1.0003020791053685);
+                \draw [line width=0.4pt] (-2.8283203055059865,-1.0003020791053685)-- (-2.1213203435596424,2.121320343559643);
+                \draw [line width=0.4pt] (-2.1213203435596424,2.121320343559643)-- (2.8523968481158435,-0.9294257478996376);
+                \draw [line width=0.4pt] (0.6779199278637946,2.922400481009601)-- (-2.8283203055059865,-1.0003020791053685);
+                \draw [line width=0.4pt,dash pattern=on 3pt off 3pt] (-2.800860507835822,-2.324307627229909)-- (0.3353100374226248,3.496484259436179);
+                \draw [line width=0.4pt,dash pattern=on 3pt off 3pt] (-1.7414529095310576,3.3626306621641726)-- (1.8251772732901783,-2.878972021760565);
+                \draw [line width=0.4pt,dash pattern=on 3pt off 3pt] (1.667687220799071,3.2051443820654075)-- (-3.6682810997163324,-0.49412918301603437);
+                \draw [line width=0.4pt,dash pattern=on 3pt off 3pt] (-3.5083849938458176,1.693513436877089)-- (3.633196664106336,1.3451592620848165);
+                \draw [line width=0.4pt] (-2.1213203435596424,2.121320343559643)-- (-2.097243800949785,0.1915925165546364);
+                \draw [line width=0.4pt] (0.6779199278637946,2.922400481009601)-- (0.7019964704736517,0.9926726540045948);
+                \draw [line width=0.4pt] (-2.097243800949785,0.1915925165546364)-- (0.7019964704736517,0.9926726540045948);
+                \draw [line width=0.4pt] (-2.1213203435596424,2.121320343559643)-- (0.7019964704736517,0.9926726540045948);
+                \draw [line width=0.4pt] (0.6779199278637946,2.922400481009601)-- (-2.097243800949785,0.1915925165546364);
+                \draw [line width=0.4pt] (0,0)-- (0.012038271304928516,-0.964863913502503);
+                \begin{scriptsize}
+                    \draw [fill=black] (0,0) circle (0.6pt);
+                    \draw[color=black] (-0.16067554506578757,0.20080236018836592) node {$O$};
+                    \draw [fill=black] (-2.1213203435596424,2.121320343559643) circle (0.6pt);
+                    \draw[color=black] (-2.2851796460224474,2.369876477249011) node {$A$};
+                    \draw [fill=black] (0.6779199278637946,2.922400481009601) circle (0.6pt);
+                    \draw[color=black] (0.7901514651525777,3.1572800950860946) node {$B$};
+                    \draw [fill=black] (2.8523968481158435,-0.9294257478996376) circle (0.6pt);
+                    \draw[color=black] (2.974082254247886,-1.0620147627579002) node {$C$};
+                    \draw [fill=black] (-2.8283203055059865,-1.0003020791053685) circle (0.6pt);
+                    \draw[color=black] (-3.0131565757208834,-1.076871434792562) node {$D$};
+                    \draw [fill=black] (-2.082489048022885,-0.9909966020327676) circle (0.6pt);
+                    \draw [fill=black] (-0.9632984294875879,1.0862423675929107) circle (0.6pt);
+                    \draw [fill=black] (-0.4443593542345254,1.0927169898595341) circle (0.6pt);
+                    \draw [fill=black] (0.7263087848242015,-0.9559522088501421) circle (0.6pt);
+                    \draw [fill=black] (-0.2702057234734494,1.8616588682659665) circle (0.6pt);
+                    \draw [fill=black] (-2.535874599961266,0.2909357157698896) circle (0.6pt);
+                    \draw [fill=black] (-1.2437613579674636,1.5830489577636913) circle (0.6pt);
+                    \draw [fill=black] (1.509851857827635,1.4487324008120122) circle (0.6pt);
+                    \draw [fill=black] (-0.7096619365429955,1.5569964987821183) circle (0.6pt);
+                    \draw [fill=black] (0.7019964704736517,0.9926726540045948) circle (0.6pt);
+                    \draw[color=black] (0.8941481693952115,1.166486042441393) node {$H_a$};
+                    \draw [fill=black] (-2.097243800949785,0.1915925165546364) circle (0.6pt);
+                    \draw[color=black] (-2.285179646022448,0.2899423923963377) node {$H_b$};
+                    \draw [fill=black] (0.012038271304928516,-0.964863913502503) circle (0.6pt);
+                    \draw[color=black] (-0.012108824719168007,-1.1511547949658718) node {$M$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{proof}
+            Gọi \(H_a\), \(H_b\), \(H_c\), \(H_d\) là trực tâm các tam giác \(BCD\), \(CDA\), \(DAB\), \(ABC\); \(M\) là trung điểm của đoạn thẳng \(BC\).\\
+            Do \(\overrightarrow{AH_b} = \overrightarrow{BH_a} = 2 \overrightarrow{OM}\) (tính chất quen thuộc) nên tứ giác \(ABH_aH_b\) là hình bình hành. Do đó, trung điểm của hai đoạn thẳng \(AH_a\) và \(BH_b\) trùng nhau.\\
+            Tương tự, ta thu được trung điểm của bốn đoạn thẳng \(AH_a\), \(BH_b\), \(CH_c\), \(DH_d\) trùng nhau. Theo Tính chất 5.1, đường thẳng Simson của \(A\), \(B\), \(C\), \(D\) ứng với tam giác \(BCD\), \(CDA\), \(DAB\), \(ABC\) đi qua trung điểm của đoạn thẳng \(AH_a\), \(BH_b\), \(CH_c\), \(DH_d\). Mà trung điểm của bốn đoạn thẳng \(AH_a\), \(BH_b\), \(CH_c\), \(DH_d\) trùng nhau nên các đường thẳng Simson đồng quy.
+        \end{proof}
+
+    \section{Tứ giác toàn phần}
+
+    \section{Cực và đối cực}
+
+    \section{Thêm một số định lí nổi tiếng}
+
+    \newpage
